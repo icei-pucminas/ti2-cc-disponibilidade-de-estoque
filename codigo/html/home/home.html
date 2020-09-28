@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Home</title>
+    
+    <!-- CSS Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/home.css">
+    
+    <!-- scripts para carregar cabeçalho de "standAloneHeader.html" em "header"-->
+    <link rel="stylesheet" href="../../css/standAloneHeader.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script> 
+        $(function(){
+            $("#standAloneHeader_V2").load("../../html/standaloneHeader.html/standAloneHeaderV2.html"); 
+        });
+    </script>
+        
+        
+</head>
+
+<body class="bg-custom-light">
+
+    <!--Cabeçalho-->
+    <header id="standAloneHeader_V2"></header>
+
+    <main>
+        
+        <!-- botões de atalho -->
+        <div class="atalhos">
+            <div class="botoes">
+                <a href="../../html/compra/compra.html" >
+                    <button class="btn btn-primary botao_atalho">Compra</button> 
+                </a>
+                <a href="../../html/inclusao em estoque/inclusao.html" >
+                    <button class="btn btn-primary botao_atalho">Inclusão em estoque</button> 
+                </a>
+                <a href="../../html/venda/venda.html" >
+                    <button class="btn btn-primary botao_atalho">Vendas</button> 
+                </a>
+                <a href="../../html/consulta de estoque/consulta.html" >
+                    <button class="btn btn-primary botao_atalho">Consulta</button> 
+                </a>
+                <a href="#">
+                    <button class="btn btn-outline-primary botao_atalho_desativado" disabled>Cadastro de usuário</button> 
+                </a>
+                <a href="#">
+                    <button class="btn btn-outline-primary botao_atalho_desativado" disabled>Relatórios</button> 
+                </a>
+                <a href="#">
+                    <button class="btn btn-outline-primary botao_atalho_desativado" disabled>Notas Fiscais</button> 
+                </a>
+                <a href="#">
+                    <button class="btn btn-outline-primary botao_atalho_desativado" disabled>Opções</button> 
+                </a>
+            </div>
+        </div>
+
+        <!-- pesquisa -->
+        <div class="pesquisa_rapida">
+            <div class="query">
+                <input oninput="pesquisarProdutos()" type="search" class="form-control campo_pesquisa" placeholder="Pesquisar produtos">
+                <button class="btn btn-info executa_pesquisa"><i class="fas fa-search"></i></button>
+            </div>
+            <table class="table table-responsive tabela_resultados_da_pesquisa">
+                <!-- preencher com JS -->
+                <thead>
+                    <tr> 
+                      <th scope="col">Código</th>
+                      <th scope="col">Descrição</th>
+                      <th scope="col">R$/Un.</th>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabela"></tbody> 
+            </table>
+        </div>
+        <!-- tabelas de informações críticas -->
+
+        <!-- Dados e Taxas -->
+        <div class="tabela_info">
+            <div class="card text-center">
+                <div class="card-header bg-custom-dark text-white pt-10 px-10">
+                    <div class="row">
+                        <div class="col h5 bg-custom-lightblue shadow text-dark">
+                            Taxa de lucro
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-previous-month pr-0">
+                            <p class="mb-0">
+                                Mês anterior
+                            </p>
+                            <h4>
+                                <span class="badge badge-danger shadow">
+                                    - 0 <small class="h5">%</small>
+                                </span>
+                                </h1>
+                        </div>
+                        <div class="col col-current-month px-0">
+                            <p class="m-0 font-weight-bold">
+                                Mês Atual
+                            </p>
+                            <h1>
+                                <span class="badge badge-light shadow">
+                                    0 <small class="h5">%</small>
+                                </span>
+                            </h1>
+                        </div>
+                        <div class="col col-next-month pl-0">
+                            <p class="mb-0">
+                                Próximo mês
+                            </p>
+                            <h4>
+                                <span class="badge badge-success shadow">
+                                    + 0 <small class="h5">%</small>
+                                </span>
+                                </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <table class="table mb-0 table-striped table-bordered table-dark">
+                        <tbody>
+                            <tr>
+                                <td>Dado 1</td>
+                                <th scope="row"> X </th>
+                            </tr>
+                            <tr>
+                                <td>Dado 2</td>
+                                <th scope="row"> Y </th>
+                            </tr>
+                            <tr>
+                                <td>Dado 3</td>
+                                <th scope="row"> Z </th>
+                            </tr>
+                            <tr>
+                                <td>Dado 4</td>
+                                <th scope="row"> W </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="tabela_info">
+            <div class="card text-center">
+                <div class="card-header bg-custom-dark text-white pt-10 px-10">
+                    <div class="row">
+                        <div class="col h5 bg-custom-lightblue shadow text-dark">
+                            Itens próximos à validade
+                        </div>
+                    </div>
+                    <div class="row">
+                       
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <table class="table mb-0 table-striped table-bordered table-dark">
+                        <tbody>
+                            <tr>
+                                <td>Dado 1</td>
+                                <th scope="row"> X </th>
+                            </tr>
+                            <tr>
+                                <td>Dado 2</td>
+                                <th scope="row"> Y </th>
+                            </tr>
+                            <tr>
+                                <td>Dado 3</td>
+                                <th scope="row"> Z </th>
+                            </tr>
+                            <tr>
+                                <td>Dado 4</td>
+                                <th scope="row"> W </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="tabela_info">
+            <div class="card text-center">
+                <div class="card-header bg-custom-dark text-white pt-10 px-10">
+                    <div class="row">
+                        <div class="col h5 bg-custom-lightblue shadow text-dark">
+                            Itens em nível crítico de estoque
+                        </div>
+                    </div>
+                    <div class="row">
+                       
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <table class="table mb-0 table-striped table-bordered table-dark">
+                        <tbody>
+                            <tr>
+                                <td>Dado 1</td>
+                                <th scope="row"> X </th>
+                            </tr>
+                            <tr>
+                                <td>Dado 2</td>
+                                <th scope="row"> Y </th>
+                            </tr>
+                            <tr>
+                                <td>Dado 3</td>
+                                <th scope="row"> Z </th>
+                            </tr>
+                            <tr>
+                                <td>Dado 4</td>
+                                <th scope="row"> W </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="tabela_info">
+            <div class="card text-center">
+                <div class="card-header bg-custom-dark text-white pt-10 px-10">
+                    <div class="row">
+                        <div class="col h5 bg-custom-lightblue shadow text-dark">
+                            Itens mais lucrativos
+                        </div>
+                    </div>
+                    <div class="row">
+                       
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <table class="table mb-0 table-striped table-bordered table-dark">
+                        <tbody>
+                            <tr>
+                                <td>Dado 1</td>
+                                <th scope="row"> X </th>
+                            </tr>
+                            <tr>
+                                <td>Dado 2</td>
+                                <th scope="row"> Y </th>
+                            </tr>
+                            <tr>
+                                <td>Dado 3</td>
+                                <th scope="row"> Z </th>
+                            </tr>
+                            <tr>
+                                <td>Dado 4</td>
+                                <th scope="row"> W </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="tabela_info">
+            <div class="card text-center">
+                <div class="card-header bg-custom-dark text-white pt-10 px-10">
+                    <div class="row">
+                        <div class="col h5 bg-custom-lightblue shadow text-dark">
+                            Categorias mais lucrativas
+                        </div>
+                    </div>
+                    <div class="row">
+                       
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <table class="table mb-0 table-striped table-bordered table-dark">
+                        <tbody>
+                            <tr>
+                                <td>Dado 1</td>
+                                <th scope="row"> X </th>
+                            </tr>
+                            <tr>
+                                <td>Dado 2</td>
+                                <th scope="row"> Y </th>
+                            </tr>
+                            <tr>
+                                <td>Dado 3</td>
+                                <th scope="row"> Z </th>
+                            </tr>
+                            <tr>
+                                <td>Dado 4</td>
+                                <th scope="row"> W </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a3121dc2ca.js" crossorigin="anonymous"></script>
+    <script src="../../js/home.js"></script>
+
+</body>
+
+</html>

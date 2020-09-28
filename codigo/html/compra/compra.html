@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Incluir Material</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../../css/compra.css">
+    
+        <!-- scripts para carregar cabeçalho de "standAloneHeader.html" em "header"-->
+        <link rel="stylesheet" href="../../css/standAloneHeader.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script> 
+            $(function(){
+            $("#standAloneHeader_V2").load("../../html/standaloneHeader.html/standAloneHeaderV2.html"); 
+            });
+        </script>
+</head>
+
+
+<body>
+    <div class="modal fade" id="modalConfirmarCompra" tabindex="-1" role="dialog" aria-labelledby="modalConfirmarCompra" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cadastrar Produto</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <label for="l_armazem">Preço de Venda:</label>
+                        <input type="number" class="form-control" id="preco" placeholder="R$">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-3 mb-3">
+                        <label for="l_armazem">Armazém</label>
+                        <input type="text" class="form-control" id="armazem">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="l_estante">Estante</label>
+                        <input type="text" class="form-control" id="estante">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="l_prateleira">Prateleira</label>
+                        <input type="text" class="form-control" id="prateleira">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="l_posicao">Posição</label>
+                        <input type="text" class="form-control" id="posicao">
+                    </div>
+                
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+
+              <div id="modalConfirmar">
+                <button type="button" class="btn btn-success" data-dismiss="modal" id="modalBtnConfirmar">Confirmar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!--Cabeçalho-->
+    <header id="standAloneHeader_V2"></header>
+
+
+    <main class="container">
+        <div class="row mb-3 border-bottom titulo">
+            <div class="col-12">
+                <h2 class="font-weight-bold">Compras</h2>
+            </div>
+        </div>
+        <div class="row mb-3 border-bottom">
+            <div class="col-1 text-center">
+                <h4>Registro</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form>
+                    <div class="form-row">
+                        <div class="col-12 col-md-7 col-lg-8 col-xl-8 mb-3">
+                            <label for="l_descricao"><strong>Descrição do produto</strong></label>
+                            <input type="text" class="form-control" id="descricao">
+                        </div>
+                        <div class="col-12 col-md-5 col-lg-4 col-xl-4 mb-3">
+                            <label for="l_validade"><strong>Validade</strong></label>
+                            <input type="date" class="form-control" id="validade">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="l_fornecedor"><strong>Fornecedor</strong></label>
+                            <select class="custom-select" id="fornecedores">
+                                <option selected>Fornecedores</option>
+                                <option value="friboi">Friboi</option>
+                                <option value="renner">Renner</option>
+                                <option value="omo">Omo</option>
+                                <option><a href="#">Adicionar fornecedor...</a></option>
+                            </select>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+                            <label for="l_valor"><strong>Data de aquisição</strong></label>
+                            <input type="date" class="form-control" id="data">
+                        </div>
+                    </div>
+        
+        
+                    <div class="form-row">
+                        <div class="col-md-3 mb-3">
+                            <label for="l_codigo"><strong>Código</strong></label>
+                            <input type="number" class="form-control" id="codigo" placeholder="XX.XX.XX">
+                        </div>
+        
+                        <div class="col-md-3 mb-3">
+                            <label for="l_categoria"><strong>Categoria</strong></label>
+                            <select class="custom-select" id="categoria">
+                                <option selected disabled>Categoria...</option>
+                                <option value="alimentos">Alimentos</option>
+                                <option value="vestuário">Vestuário</option>
+                                <option value="limpeza">Limpeza</option>
+                                <option value="0">Adicionar categoria...</option>
+                            </select>
+                        </div>
+        
+        
+                        <div class="col-md-3 mb-3">
+                            <label for="l_quantidade"><strong>Quantidade</strong></label>
+                            <input type="number" class="form-control" id="quantidade" value="0">
+                        </div>
+        
+                        <div class="col-md-3 mb-3">
+                            <label for="l_valor"><strong>Valor Aquisição</strong></label>
+                            <input type="number" class="form-control" id="valor" placeholder="R$ 0.00">
+                        </div>
+        
+                    </div>
+        
+                    <div class="form-row">
+
+                    </div>
+                    
+                    <div class="form-row mt-3">
+                        <div class="col-2 col-sm-2 col-md-3 col-lg-3 col-xl-3"></div>
+                        <div class="col-8 col-sm-8 col-md-6 col-lg-6 col-xl-6">
+                            <button class="btn btn-primary w-100" id="btnRegistrar" type="submit">Registrar Compra</button>
+                        </div>    
+                        <div class="col-2 col-sm-2 col-md-3 col-lg-3 col-xl-3"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--FORMULÁRIO-->
+        <div class="row my-3 border-bottom border-top">
+            <div class="col-12 text-center">
+                <h4>Em aguardo</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div id="tabela">
+                    <table class="table table-responsive table-striped ">
+                        <thead>
+                            <tr>
+                                <th scope="col">Código</th>
+                                <th scope="col">Descrição</th>
+                                <th scope="col">Fornecedor</th>
+                                <th scope="col">Categoria</th>
+                                <th scope="col">Quantidade</th>
+                                <th scope="col">Valor Aq.</th>
+                                <th scope="col">Data Aq.</th>
+                                <th scope="col">Validade</th>
+                                <th scope="col" colspan="2">Opções</th>
+                            </tr>
+                            
+                        </thead>
+                        <tbody id="corpoTabela"></tbody>
+                    </table>
+        
+                </div>
+            </div>
+        </div>
+        
+
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a3121dc2ca.js" crossorigin="anonymous"></script>
+    <!-- Dados de Login (Fake) -->
+    <script src="../../js/compra.js"></script>
+</body>
+
+
+
+</html>
