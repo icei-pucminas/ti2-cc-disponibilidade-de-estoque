@@ -1,12 +1,13 @@
 # TITULO DO PROJETO
 
 
-**Nome completo do Aluno 1, email do aluno 1**
+**Alice Cabral de Avelar Marques, email do aluno 1**
 
-**Nome completo do Aluno 2, email do aluno 2**
+**Ana Carolina Manso Silvério, email do aluno 2**
 
-**Nome completo do Aluno 3, email do aluno 3**
+**Juliana Silvestre da Silva, email do aluno 3**
 
+**Marco Aurélio Silva de Souza Júnior, email do aluno 3**
 ---
 
 _Curso de Ciência da Computação, Unidade {Coração Eucarístico | Praça da Liberdade}_
