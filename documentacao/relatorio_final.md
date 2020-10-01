@@ -7,7 +7,7 @@
 
 **Juliana Silvestre da Silva, email do aluno 3**
 
-**Marco Aurélio Silva de Souza Júnior, email do aluno 3**
+**Marco Aurélio Silva de Souza Júnior, email do aluno 4**
 ---
 
 _Curso de Ciência da Computação, Unidade {Coração Eucarístico | Praça da Liberdade}_
