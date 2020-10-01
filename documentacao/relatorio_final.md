@@ -1,16 +1,16 @@
-# TITULO DO PROJETO
+# DISPONIBILIDADE DE ESTOQUE
 
 
-**Alice Cabral de Avelar Marques, email do aluno 1**
+**Alice Cabral de Avelar Marques, alicecamarques@gmail.com**
 
-**Ana Carolina Manso Silvério, email do aluno 2**
+**Ana Carolina Manso Silvério, carol.manso1@gmail.com**
 
-**Juliana Silvestre da Silva, email do aluno 3**
+**Juliana Silvestre da Silva, juliana.silvestresilva@hotmail.com**
 
-**Marco Aurélio Silva de Souza Júnior, email do aluno 4**
+**Marco Aurélio Silva de Souza Júnior, aureliojuniorcmrj@hotmail.com**
 ---
 
-_Curso de Ciência da Computação, Unidade {Coração Eucarístico | Praça da Liberdade}_
+_Curso de Ciência da Computação, Unidade {Coração Eucarístico}_
 
 _Instituto de Informática e Ciências Exatas – Pontifícia Universidade de Minas Gerais (PUC MINAS), Belo Horizonte – MG – Brasil_
 
@@ -25,32 +25,24 @@ mostrar algum resultado relevante do trabalho (até 10 linhas)._
 
 **1. Introdução**
 
-A introdução deve apresentar de dois ou quatro parágrafos de contextualização do trabalho. 
-
-Na **contextualização**, o aluno deve dizer do que se trata o trabalho, em que área ou contexto se insere. 
-A **contextualização** deve ser desenvolvida de algo mais genérico para algo mais específico. 
-A citação de pesquisas quantitativas é bem aceita aqui (corretamente referenciadas).
-
-Em seguida o aluno deve caminhar a contextualização para descrever o **problema** que o artigo trata. 
-O **problema** pode ser algo vivido em uma empresa específica.
-
-
     1.1 Contextualização
-    1.2 Problema
-    1.3 Objetivo geral
+Conforme o passar do tempo, é notável a importância em se debater sobre custos logísticos e gerenciamento de estoque, devido ao desejo de diversos cidadãos brasileiros de possuir o negócio próprio. Sem dúvidas, esse debate é fundamental e deve estar enraizado na origem do projeto, sendo o crescimento do plano empreendedor atualizado com as estratégias mais recentes. Desse modo, o objetivo principal de uma boa gestão, é otimizar o investimento financeiro da empresa, de tal forma que, ocorra a redução da necessidade do capital investimento.
+Diariamente, é evidente o aumento do uso de ferramentas que proporcionem à corporação o atributo de concorrência no mercado. Assim, a utilização correta do estoque de segurança ou de cobertura para atender a demanda local do usuário, é importante para manter o nível de atendimento, consequentemente, ocorrendo o aumento da qualidade e competitividade da empresa perante os concorrentes. Naturalmente, possuir um inventário e  administrar as movimentações dos produtos, atribuindo estratégias de venda e controle, é, indubitavelmente, um diferencial no mercado varejista. A diferença entre empreendimentos que atingem o sucesso funcional do projeto e aqueles que fecham as portas, é, muitas vezes, resultado da administração e estratégias utilizadas pelo proprietário e equipe. Nesse sentido, em um ambiente com milhares de produtos estocados, onde é necessário manter um controle rígido, fazer a gestão de estoque se torna algo complexo devido à diversidade de itens, dificultando a administração da classificação da importância de cada mercadoria.
 
-O aluno deve escrever um pequeno parágrafo ou frase com o **objetivo geral** do trabalho. 
-O objetivo deve ser bem direto, específico e definido com verbos de ação (elaborar, propor, ava-liar, comparar etc.).
+    1.2 Problema
+De acordo com o evidenciado, o problema que se busca resolver com este projeto é o mau gerenciamento do estoque de micro e pequenas empresas, o qual gera alto investimento e baixa captação de novos clientes, por consequência, havendo taxas inconstantes de desperdício de produtos e alta taxa de investimento com retornos não eficientes.
+
+    1.3 Objetivo geral
+A finalidade integrada nesse projeto é a criação de um software que realize a gestão de estoque para o empreendedor, de forma facilitada e integra, proporcionando dados compactados, relatórios eficientes e estratégias de qualidade com a tecnologia mais recente do mercado, a fim de aperfeiçoar a administração do comércio e garantir o sucesso financeiro da empresa.
 
         1.3.1 Objetivos específicos
+* Proporcionar funcionalidades que viabilizem ao dono da empresa administrar seu próprio negócio por meio da gestão de estoque e ter em seu alcance relatórios atualizados a todo momento a partir das informações inseridas.
+* Garantir ao usuário, a partir das informações inseridas, a opção de utilizar gratuitamente as estratégias atualizadas de mercado disponibilizadas em nosso software.
+* Permitir a interação do usuário com a equipe de desenvolvimento para adicionar funcionalidades e relatórios específicos necessários para seu negócio.
 
-Apresente também alguns (pelo menos 2) **objetivos específicos** depende
-ndo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
 
     1.4 Justificativas
-
-Mostre também as **justificativas** para o 
-desenvolvimento do seu trabalho e caso deseje, desta-que alguma contribuição do trabalho.
+De acordo com a pesquisa realizada pelo Sebrae, chamada “Causa Mortis”: a falta de gestão é uma das principais causas de mortalidade de empresas no Brasil. Essa pesquisa evidencia como são essenciais a organização e controle de um negócio, sendo um grande erro não se preocupar com o assunto, já que a falta de eficiência e organização ao gerenciar o estoque pode gerar prejuízos importantes para o negócio, como por exemplo: perda de vendas e investimentos desnecessários em produtos e materiais.
 
 
 **2. Projeto da Solução**
