@@ -51,6 +51,8 @@ _**Resumo**. Para os empreendedores, é de extrema importância haver um bom ger
 
 
 **2. Projeto da Solução**
+	É necessário coletar os requisitos do projeto para atingir os objetivos,o processo inclui definir e documentar as necessidades das partes interessadas.
+	O escopo funcional do projeto é definido por meio dos requisitos funcionais que descrevem as possibilidades interação dos usuários, bem como os requisitos não funcionais que descrevem os aspectos que o sistema deverá apresentar de maneira geral. Estes requisitos são apresentados a seguir.
 
     2.1. Requisitos funcionais
 	
