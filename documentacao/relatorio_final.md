@@ -60,11 +60,13 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 
 | No.           | Descrição                       | Prioridade |
 | ------------- |:-------------------------------:| ----------:|
-| RF - 01       | O site deve apresentar na página|  Alta      |
+| RF-01         |{O site deve apresentar na página| Alta       |
 |               |principal um menu com opções de  |            |
 |               |ações de usuário e outras opções |            |
-|               |nas suas atividades.  		  |            |
-|---------------|:-------------------------------:|-----------:|
+|               |nas suas atividades.             |            |
+| Rf-02		|{O usuário deve conseguir        | Alta       |
+| 		|consultar a quantidade de        |            |
+|               |determinado produto no estoque.  |            |
 
     2.2. Tecnologias
 
