@@ -62,11 +62,28 @@ de acordo com as definições do modelo de negócio.
 
     2.2. Tecnologias
 
-Descreva qual(is) tecnologias você vai usar para resolver o seu problema, ou seja implementar a sua solução. 
-Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, 
-IDEs de desenvolvimento, e ferramentas.  Apresente também uma figura explicando como as tecnologias estão 
-relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até 
-retornar uma resposta ao usuário. 
+A solução é acessada através de um navegador à escolha do usuário, para visualização da página web, implementada com arquivos Java, JavaScript, HTML, CSS, PostgreSQL e imagens, que, por sua vez, serão hospedadas no GitHub Pages.
+
+A publicação no site é feita por meio de uma submissão do projeto (push) via git para o repositório remoto no [GitHub](https://github.com/icei-pucminas/ti2-cc-disponibilidade-de-estoque).
+
+Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
+
+| Ambiente                        | Plataforma             | Link de acesso                                                                              |
+| --------------------------------|:----------------------:| -------------------------------------------------------------------------------------------:|
+| Repositório de código fonte     | GitHub                 | https://github.com/icei-pucminas/ti2-cc-disponibilidade-de-estoque/tree/master/codigo       |
+| Documentos do projeto           | GitHub                 | https://github.com/icei-pucminas/ti2-cc-disponibilidade-de-estoque/tree/master/documentacao |
+| Gerenciamento do Projeto        | Trello                 | https://trello.com/b/bfvSbq8m/ti2                                                           | 
+| IDE de Desenvolvimento          | Eclipse                |                                                                                             |
+| Gerenciamento de Dependências   | Maven                  |                                                                                             |
+| Gerenciamento de banco de dados | phpPgAdmin / pgAdmin 4 |                                                                                             |
+| Web Framework                   | Spark Framework        |                                                                                             |
+
+Com relação à gestão do código fonte, o grupo utiliza um processo baseado no GitHub Flow criado pelo próprio GitHub (atualizado em 24/07/2020), mostrado na Figura a seguir. Portanto, o projeto segue a seguinte convenção para o nome de branchs:
+
+- master: versão pronta para implementação (deploy).
+- nome-explicativo: versão herdada da master.
+
+/imagens/github_flow.jpg
 
     2.3. Serviços inteligentes
 
