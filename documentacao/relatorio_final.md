@@ -60,9 +60,18 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 
 | No.           | Descrição                       | Prioridade |
 | ------------- |:-------------------------------:| ----------:|
-| {número       | Descrição resumida do requisito | {Alta      |
-| sequencial    |                                 |  média     |
-| identificador |                                 |  ou baixa  | 
+| RF-01         |  O site deve conter na página principal um menu com opções de ações de usuário.       | Alta  |
+| RF-02         |  O site deve permitir o cadastro de usuários.  				        | Alta  |
+| RF-03         |  O usuário deve conseguir cadastrar produtos no estoque.                              | Alta  |
+| RF-04		|  O usuário deve conseguir consultar a quantidade de determinado produto no estoque.   | Alta  |
+| RF-05		|  O usuário deve conseguir atualizar dados um produto previamente cadastrado.          | Alta  |
+| RF-06		|  O usuário deve conseguir deletar um produto cadastrado.                              | Alta  |
+| RF-07         |  O site deve fornecer uma lista com todos os produtos cadastrados.                    | Alta  |
+| RF-08         |  O site deve oferecer uma funcionalidade de gráficos dinâmicos sobre as vendas.       | Alta  |
+| RF-09         |  O site deve alertar sobre baixa quantidade de determinado produto no estoque.        | Média |
+| RF-10         |  O site deve fazer o autopreenchimento nos filtros de busca e de cadastro de produtos.| Baixa |
+| RF-11         |  O site deve fornecer informações de contato dos desenvolvedores da página.           | Baixa |
+
 
 
     2.2. Tecnologias
