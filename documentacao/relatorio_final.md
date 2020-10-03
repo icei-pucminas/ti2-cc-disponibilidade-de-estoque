@@ -52,19 +52,19 @@ _**Resumo**. Para os empreendedores, é de extrema importância haver um bom ger
 
 **2. Projeto da Solução**
 	É necessário coletar os requisitos do projeto para atingir os objetivos,o processo inclui definir e documentar as necessidades das partes interessadas.
-	O escopo funcional do projeto é definido por meio dos requisitos funcionais que descrevem as possibilidades interação dos usuários, bem como os requisitos não funcionais que descrevem os aspectos que o sistema deverá apresentar de maneira geral. Estes requisitos são apresentados a seguir.
+	O escopo funcional do projeto é definido por meio dos requisitos funcionais que descrevem as possibilidades interação dos usuários. Estes requisitos são apresentados a seguir.
 
     2.1. Requisitos funcionais
 	
-Enumere os requisitos funcionais previstos para a sua aplicação. 
-Use a tabela abaixo para enumerá-lo.  Esses requisitos devem estar 
-de acordo com as definições do modelo de negócio.
+A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade em que os mesmos devem ser entregues.
 
 | No.           | Descrição                       | Prioridade |
 | ------------- |:-------------------------------:| ----------:|
-| {número       | Descrição resumida do requisito | {Alta      |
-| sequencial    |                                 |  média     |
-| identificador |                                 |  ou baixa  | 
+| RF - 01       | O site deve apresentar na página|  Alta      |
+|               |principal um menu com opções de  |            |
+|               |ações de usuário e outras opções |            |
+|               |nas suas atividades.  		  |            |
+|---------------|:-------------------------------:|-----------:|
 
     2.2. Tecnologias
 
