@@ -1,34 +1,42 @@
 # Ata de Reunião Semanal
 
 ## Informações
-**Data/hora:** data, hora  
-**Local:** local da reunião  
-**Meeting Purpose:** meeting_purpose  
-**Secretário:** responsável pela ata  
+**Data/hora:** 01/10/2020, 15h 
+**Local:** Microsoft Teams 
+**Meeting Purpose:** Discutir sobre o que cada integrante faria na entrega do Sprint, além de discutir sobre o trabalho em si  
+**Secretário:** Ana Carolina Manso Silvério   
 
 ## Participantes
 Estiveram presentes na reunião:
-- Nome completo da pessoa A
-- Nome completo da pessoa B
-- Nome completo da pessoa C
+- Alice Cabral de Avelar Marques
+- Ana Carolina Manso Silvério
+-Juliana Silvestre da Silva
+-Marco Aurélio Silva de Souza Júnior
 
 ## Pauta
 
 Item | Descrição
 ---- | ----
-Item de Agenda 1 | • <br>• <br>• <br>• <br>• 
-Item de Agenda 2 | • <br>• <br>• <br>• <br>• 
+Sprint | • Confirmar o que deveríamos fazer na Sprint 1<br>• Definir as tarefas de cada participante <br>•Definir os tópicos que colocaríamos em cada parte do documento<br>
+Ambiente de desenvolvimento | • Definição do ambiente Trello para organizar as tarefas no modelo Kanban<br>• Assistir às instruções dadas na aula da turma da tarde que ocorreu no dia 28/07 sobre o GitHub da disciplina<br>• <br>• <br>•
+Tema e especificação do projeto | • Discutirmos sobre a especificação do projeto: para qual tipo de estoque iríamos voltar o projeto (provavelmente para pequenos supermercardos ou sacolões)<br>•Explicação sobre o que foi feito no projeto do semestre passado que iríamos aprimorar, devido a nem todos os participantes terem participado do desenvolvimento do mesmo<br>
 
 ## Notas e Discussões
-Item | Quem | Anotações |
+ Ata, Introdução na pagina inicial do projeto, Resumo no documento  | Ana Carolina Manso |
 ---- | ---- | ---- |
-item | quem | anotações |
-
+Protótipo do modelo de entidade Relacionamento | Alice Cabral |
+---- | ---- | ---- |
+Requisitos do projeto | Juliana Silvestre | 
+---- | ---- | ---- |
+ Especificação de tecnologias| Marco Auélio | 
 
 ## Ações e pendências
 | Feito (S/N)? | Item | Responsável | Data para solução |
-| ---- | ---- | ---- | ---- |
-| | item | quem | data |
+| - | Ata, Introdução na pagina inicial do projeto, Resumo no documento  | Ana Carolina Manso | 04/10- 7h |
+| - | Protótipo do modelo de entidade Relacionamento | Alice Cabral | 04/10- 7h |
+| - |Requisitos do projeto | Juliana Silvestre | 04/10- 7h |
+| - | Especificação de tecnologias| Marco Auélio | 04/10- 7h |
+
 
 ## Outras notas e informações
 N/A
