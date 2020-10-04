@@ -55,17 +55,17 @@ de acordo com as definições do modelo de negócio.
 
 | No.           | Descrição                       | Prioridade |
 | ------------- |:-------------------------------:| ----------:|
-|		|O site deve conter na página principal um menu com opções de ações de usuário. |  |     
-|		|O site deve permitir o cadastro de usuários.  | |
-|		|O usuário deve conseguir cadastrar produtos no estoque.|     |           
-|		|O usuário deve conseguir consultar a quantidade de determinado produto no estoque.|   |
-|		|O usuário deve conseguir atualizar dados um produto previamente cadastrado.|    |            
-|		|O usuário deve conseguir deletar um produto cadastrado. |      |           
-|		|O site deve fornecer uma lista com todos os produtos cadastrados. |    |
-|     		|O site deve oferecer uma funcionalidade de gráficos dinâmicos sobre as vendas.  |     |
-|		|O site deve alertar sobre baixa quantidade de determinado produto no estoque.   |     |
-|		|O site deve fazer o autopreenchimento nos filtros de busca e de cadastro de produtos.|  |
-|  		|O site deve fornecer informações de contato dos desenvolvedores da página.     |      |
+|RF-01		|O site deve conter na página principal um menu com opções de ações de usuário. | Alta |     
+|RF-02		|O site deve permitir o cadastro de usuários.  | Alta |
+|RF-03		|O usuário deve conseguir cadastrar produtos no estoque.|  Alta   |           
+|RF-04		|O usuário deve conseguir consultar a quantidade de determinado produto no estoque.| Alta   |
+|RF-05		|O usuário deve conseguir atualizar dados um produto previamente cadastrado.| Alta   |            
+|RF-06		|O usuário deve conseguir deletar um produto cadastrado. | Alta     |           
+|RF-07		|O site deve fornecer uma lista com todos os produtos cadastrados. | Alta   |
+|RF-08   	|O site deve oferecer uma funcionalidade de gráficos dinâmicos sobre as vendas.  |  Média   |
+|RF-09		|O site deve alertar sobre baixa quantidade de determinado produto no estoque.   |  Média   |
+|RF-10		|O site deve fazer o autopreenchimento nos filtros de busca e de cadastro de produtos.| Média |
+|RF-11  	|O site deve fornecer informações de contato dos desenvolvedores da página.     |  Baixa    |
 
 
     2.2. Tecnologias
