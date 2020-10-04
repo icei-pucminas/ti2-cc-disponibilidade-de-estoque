@@ -55,9 +55,18 @@ de acordo com as definições do modelo de negócio.
 
 | No.           | Descrição                       | Prioridade |
 | ------------- |:-------------------------------:| ----------:|
-| {número       | Descrição resumida do requisito | {Alta      |
-| sequencial    |                                 |  média     |
-| identificador |                                 |  ou baixa  | 
+|		|O site deve conter na página principal um menu com opções de ações de usuário. |  |     
+|		|O site deve permitir o cadastro de usuários.  | |
+|		|O usuário deve conseguir cadastrar produtos no estoque.|     |           
+|		|O usuário deve conseguir consultar a quantidade de determinado produto no estoque.|   |
+|		|O usuário deve conseguir atualizar dados um produto previamente cadastrado.|    |            
+|		|O usuário deve conseguir deletar um produto cadastrado. |      |           
+|		|O site deve fornecer uma lista com todos os produtos cadastrados. |    |
+|     		|O site deve oferecer uma funcionalidade de gráficos dinâmicos sobre as vendas.  |     |
+|		|O site deve alertar sobre baixa quantidade de determinado produto no estoque.   |     |
+|		|O site deve fazer o autopreenchimento nos filtros de busca e de cadastro de produtos.|  |
+|  		|O site deve fornecer informações de contato dos desenvolvedores da página.     |      |
+
 
     2.2. Tecnologias
 
