@@ -1,17 +1,17 @@
 # Ata de Reunião Semanal
 
 ## Informações
-**Data/hora:** 01/10/2020, 15h 
-**Local:** Microsoft Teams 
-**Meeting Purpose:** Discutir sobre o que cada integrante faria na entrega do Sprint, além de discutir sobre o trabalho em si  
+**Data/hora:** 01/10/2020, 15h <br>
+**Local:** Microsoft Teams <br>
+**Meeting Purpose:** Discutir sobre o que cada integrante faria na entrega do Sprint, além de discutir sobre o trabalho em si  <br>
 **Secretário:** Ana Carolina Manso Silvério   
 
 ## Participantes
 Estiveram presentes na reunião:
 - Alice Cabral de Avelar Marques
 - Ana Carolina Manso Silvério
--Juliana Silvestre da Silva
--Marco Aurélio Silva de Souza Júnior
+- Juliana Silvestre da Silva
+- Marco Aurélio Silva de Souza Júnior
 
 ## Pauta
 
@@ -41,4 +41,4 @@ Especificação de tecnologias| Marco Auélio | <br>
 
 ## Outras notas e informações
 N/A
-
+ 
