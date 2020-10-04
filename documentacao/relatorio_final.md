@@ -25,11 +25,6 @@ _**Resumo**. Para os empreendedores, é de extrema importância haver um bom ger
 
 **1. Introdução**
 
-	A cada dia que passa, novas empresas surgem no mercado. No contexto atual, no qual o desemprego obteve um aumento significativo devido à pandemia de COVID-19,é cada vez mais evidente o crescimento do empreendedorismo e de pequenas empresas que dependem de um gerenciamento de estoque eficiente para obterem sucesso, visto que ele demonstra o desempenho da empresa no mercado e no ponto de vista dos clientes, além refletir os lucros, prejuízos e o a demanda dos clientes/usuários. Contudo, muitas vezes as ferramentas que fazem o controle de estoque têm um custo alto e  baixa captação de novos clientes,e, por consequência, há o desperdício de produtos e alta taxa de investimento com retornos baixos.
-	Uma maneira fundamental de garantir a melhor manutenção do negócio e o constante crescimento da empresa é a adoção de uma administração automatizada.Nesse contexto, a finalidade desse trabalho é de desenvolver um sistema de fácil utilização, que atenda principalmente aos pequenos empreendedores e donos de mercados de forma a gerenciar os produtos no inventário e direcionar as mercadorias a partir da necessidade atual em que elas se encontram, atribuindo o conhecimento ao empreendedor de quais produtos são mais importantes para o seu negócio, evitando gastos desnecessários em mercadorias com baixa demanda, e, por fim, garantindo um melhor gerenciamento de estoque, maiores lucros e sucesso no mercado. Para o trabalho em grupo, ferramentas de otimização, como o GitHub, o Trello e o Microsoft Teams serão utilizadas, e para o desenvolvimento da aplicação, ferramentas como  Eclipse, Maven, phpPgAdmin e Spark Framework serão utilizadas a fim de desenvolver o back-end da aplicação, que envolverá conceitos das disciplinas de Sistemas Inteligentes, Banco de Dados e Algoritmos e Estrutura de Dados. A primeira parte do projeto envolvendo a disciplina de Desenvolvimento de Interfaces WEB obteve um resultado satisfatório perante os usuários que o testaram. Nessa etapa, o objetivo é de aprimorar ainda mais o que já foi desenvolvido, e principalmente, desenvolver um software para ajudar os pequenos empreendedores. 
-
-
-
 **1.1 Contextualização**
 	Conforme o passar do tempo, é notável a importância em se debater sobre custos logísticos e gerenciamento de estoque, devido ao desejo de diversos cidadãos brasileiros de possuir o negócio próprio. Sem dúvidas, esse debate é fundamental e deve estar enraizado na origem do projeto, sendo o crescimento do plano empreendedor atualizado com as estratégias mais recentes. Desse modo, o objetivo principal de uma boa gestão, é otimizar o investimento financeiro da empresa, de tal forma que, ocorra a redução da necessidade do capital investimento.
 	Diariamente, é evidente o aumento do uso de ferramentas que proporcionem à corporação o atributo de concorrência no mercado. Assim, a utilização correta do estoque de segurança ou de cobertura para atender a demanda local do usuário, é importante para manter o nível de atendimento, consequentemente, ocorrendo o aumento da qualidade e competitividade da empresa perante os concorrentes. Naturalmente, possuir um inventário e  administrar as movimentações dos produtos, atribuindo estratégias de venda e controle, é, indubitavelmente, um diferencial no mercado varejista. A diferença entre empreendimentos que atingem o sucesso funcional do projeto e aqueles que fecham as portas, é, muitas vezes, resultado da administração e estratégias utilizadas pelo proprietário e equipe. Nesse sentido, em um ambiente com milhares de produtos estocados, onde é necessário manter um controle rígido, fazer a gestão de estoque se torna algo complexo devido à diversidade de itens, dificultando a administração da classificação da importância de cada mercadoria.
@@ -51,28 +46,18 @@ _**Resumo**. Para os empreendedores, é de extrema importância haver um bom ger
 
 
 **2. Projeto da Solução**
-	É necessário coletar os requisitos do projeto para atingir os objetivos,o processo inclui definir e documentar as necessidades das partes interessadas.
-	O escopo funcional do projeto é definido por meio dos requisitos funcionais que descrevem as possibilidades interação dos usuários. Estes requisitos são apresentados a seguir.
 
     2.1. Requisitos funcionais
 	
-A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade em que os mesmos devem ser entregues.
+Enumere os requisitos funcionais previstos para a sua aplicação. 
+Use a tabela abaixo para enumerá-lo.  Esses requisitos devem estar 
+de acordo com as definições do modelo de negócio.
 
 | No.           | Descrição                       | Prioridade |
 | ------------- |:-------------------------------:| ----------:|
-| RF-01         |  O site deve conter na página principal um menu com opções de ações de usuário.       | Alta  |
-| RF-02         |  O site deve permitir o cadastro de usuários.  				        | Alta  |
-| RF-03         |  O usuário deve conseguir cadastrar produtos no estoque.                              | Alta  |
-| RF-04		|  O usuário deve conseguir consultar a quantidade de determinado produto no estoque.   | Alta  |
-| RF-05		|  O usuário deve conseguir atualizar dados um produto previamente cadastrado.          | Alta  |
-| RF-06		|  O usuário deve conseguir deletar um produto cadastrado.                              | Alta  |
-| RF-07         |  O site deve fornecer uma lista com todos os produtos cadastrados.                    | Alta  |
-| RF-08         |  O site deve oferecer uma funcionalidade de gráficos dinâmicos sobre as vendas.       | Alta  |
-| RF-09         |  O site deve alertar sobre baixa quantidade de determinado produto no estoque.        | Média |
-| RF-10         |  O site deve fazer o autopreenchimento nos filtros de busca e de cadastro de produtos.| Baixa |
-| RF-11         |  O site deve fornecer informações de contato dos desenvolvedores da página.           | Baixa |
-
-
+| {número       | Descrição resumida do requisito | {Alta      |
+| sequencial    |                                 |  média     |
+| identificador |                                 |  ou baixa  | 
 
     2.2. Tecnologias
 
