@@ -18,24 +18,25 @@ Estiveram presentes na reunião:
 Item | Descrição
 ---- | ----
 Sprint | • Confirmar o que deveríamos fazer na Sprint 1<br>• Definir as tarefas de cada participante <br>•Definir os tópicos que colocaríamos em cada parte do documento<br>
-Ambiente de desenvolvimento | • Definição do ambiente Trello para organizar as tarefas no modelo Kanban<br>• Assistir às instruções dadas na aula da turma da tarde que ocorreu no dia 28/07 sobre o GitHub da disciplina<br>• <br>• <br>•
+Ambiente de desenvolvimento | • Definição do ambiente Trello para organizar as tarefas no modelo Kanban<br>• Assistir às instruções dadas na aula da turma da tarde que ocorreu no dia 28/07 sobre o GitHub da disciplina<br>
 Tema e especificação do projeto | • Discutirmos sobre a especificação do projeto: para qual tipo de estoque iríamos voltar o projeto (provavelmente para pequenos supermercardos ou sacolões)<br>•Explicação sobre o que foi feito no projeto do semestre passado que iríamos aprimorar, devido a nem todos os participantes terem participado do desenvolvimento do mesmo<br>
 
 ## Notas e Discussões
- Ata, Introdução na pagina inicial do projeto, Resumo no documento  | Ana Carolina Manso |
----- | ---- | ---- |
-Protótipo do modelo de entidade Relacionamento | Alice Cabral |
----- | ---- | ---- |
-Requisitos do projeto | Juliana Silvestre | 
----- | ---- | ---- |
- Especificação de tecnologias| Marco Auélio | 
+
+Item |Quem
+---- | ----
+Ata, Introdução na pagina inicial do projeto, Resumo no documento  | Ana Carolina Manso | <br>
+Protótipo do modelo de entidade Relacionamento | Alice Cabral |<br>
+Requisitos do projeto | Juliana Silvestre | <br>
+Especificação de tecnologias| Marco Auélio | <br>
 
 ## Ações e pendências
 | Feito (S/N)? | Item | Responsável | Data para solução |
-| - | Ata, Introdução na pagina inicial do projeto, Resumo no documento  | Ana Carolina Manso | 04/10- 7h |
-| - | Protótipo do modelo de entidade Relacionamento | Alice Cabral | 04/10- 7h |
-| - |Requisitos do projeto | Juliana Silvestre | 04/10- 7h |
-| - | Especificação de tecnologias| Marco Auélio | 04/10- 7h |
+---- | ---- | ---- | ----
+| - | Ata, Introdução na pagina inicial do projeto, Resumo no documento  | Ana Carolina Manso | 04/10- 7h |<br>
+| - | Protótipo do modelo de entidade Relacionamento | Alice Cabral | 04/10- 7h |<br>
+| - |Requisitos do projeto | Juliana Silvestre | 04/10- 7h |<br>
+| - | Especificação de tecnologias| Marco Auélio | 04/10- 7h |<br>
 
 
 ## Outras notas e informações
