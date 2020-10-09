@@ -96,35 +96,25 @@ Em vista que, o problema enfrentado está presente no cotidiano do público-alvo
 
 A organização das informações selecionadas durante o desenvolvimento e entendimento das personas estão nas figuras abaixo:
 
-| # | Pedro Teixeira |  |
-|:-:|:-:|:-:|
-|  | Idade: 34 Ocupação: Veterinário, é dono de um pequeno açougue que atua como mini-restaurante e bar. | Aplicativos: Instagram Conta Azul Facebook |
-| Motivações: Loja e Família Amor por carne Viajar | Frustrações: Poucos clientes Roubo Fornecedores caros Sistema de Venda | Hobbies, História: Robótica Veio de Brasília |
-
-| # | Clara Pereira |  |
-|:-:|:-:|:-:|
-|  | Idade: 56 Ocupação: Engenheira química, dona de uma distribuidora de bebidas  | Aplicativos: Instagram Zé Delivery |
-| Motivações: Financeira Gosta de cerveja Moradia perto do trabalho | Frustrações: Pessoas inconvenientes Venda Fiado sem pagamento Alto custo do fornecedor | Hobbies, História: Pescaria Churrasco |
-
-| # | Rodolfo Lima Antunes |  |
-|:-:|:-:|:-:|
-|  | Idade: 23 Ocupação: Dono de uma microempresa emergente de móveis planejados.   | Aplicativos: Instagram REHAU IVegan |
-| Motivações Financeira Amor pela culinária vegana Avanço tecnológico | Frustrações Perda de matérias primas Ser tratado como leigo Reuniões longas | Hobbies, História Cozinhar para os amigos e a namorada Jogar dota 2 |
-
-| # | Raquel Ferreira |  |
-|:-:|:-:|:-:|
-|  | Idade: 36 Ocupação: Dona de uma empresa de cosméticos.   | Aplicativos: Instagram Pinterest Facebook |
-| Motivações Crescimento da área estética Viagens | Frustrações Excesso de algumas mercadorias Perda de mercadoria por estar vencida | Hobbies, História Viajar Sair com as amigas |
-
-| # | Renato Hickmann |  |
-|:-:|:-:|:-:|
-|  | Idade: 48 Ocupação: Dono de uma pequena empresa de sapatos.   | Aplicativos: Instagram Airbnb Facebook |
-| Motivações Financeira Viagens Ter a empresa como marca reconhecida | Frustrações Conversas curtas Perda de mercadoria por estar fora de moda  Perguntas mal respondidas | Hobbies, História Viajar Jogar Cs:go com seus filhos |
-
-| # | Andrea Camargos |  |
-|:-:|:-:|:-:|
-|  | Idade: 60 Ocupação: Dona de uma Farmácia   | Aplicativos: Instagram Facebook Ifood |
-| Motivações Família Saúde | Frustrações Fornecedores com altos preços   Dificuldade em encontrar produto no estoque  | Hobbies, História Academia Passar o tempo com os netos |
+| ![persona1](imagens/01persona1.jpg "Persona")                         | Pedro Teixeira                                                                                       |                                                                      |
+|-----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
+|                                                                       | Idade: 34 Ocupação: Veterinário, é dono de um pequeno açougue que atua como mini-restaurante e bar.  | Aplicativos: Instagram  Conta Azul  Facebook                         |
+| Motivações: Loja e Família  Amor por carne  Viajar                    | Frustrações: Poucos clientes, Roubo, Fornecedores caros, Sistema de Venda                            | Hobbies, História: Robótica, Veio de Brasília                        |
+| ![persona2](imagens/02persona2.jpg "Persona")                         | Clara Pereira                                                                                        |                                                                      |
+|                                                                       | Idade: 56 Ocupação: Engenheira química, dona de uma distribuidora de bebidas                         | Aplicativos: Instagram  Zé Delivery                                  |
+| Motivações: Financeira  Gosta de cerveja  Moradia perto do trabalho   | Frustrações: Pessoas inconvenientes  Venda Fiado sem pagamento  Alto custo do fornecedor             | Hobbies, História: Pescaria  Churrasco                               |
+| ![persona3](imagens/03persona3.jpg "Persona")                         | Rodolfo Lima Antunes                                                                                 |                                                                      |
+|                                                                       | Idade: 23 Ocupação: Dono de uma microempresa emergente de móveis planejados.                         | Aplicativos: Instagram  REHAU  IVegan                                |
+| Motivações Financeira  Amor pela culinária vegana  Avanço tecnológico | Frustrações Perda de matérias primas  Ser tratado como leigo  Reuniões longas                        | Hobbies, História Cozinhar para os amigos e a namorada  Jogar dota 2 |
+| ![persona4](imagens/04persona4.jpg "Persona")                         | Raquel Ferreira                                                                                      |                                                                      |
+|                                                                       | Idade: 36 Ocupação: Dona de uma empresa de cosméticos.                                               | Aplicativos: Instagram  Pinterest  Facebook                          |
+| Motivações Crescimento da área estética  Viagens                      | Frustrações Excesso de algumas mercadorias  Perda de mercadoria por estar vencida                    | Hobbies, História Viajar  Sair com as amigas                         |
+| ![persona5](imagens/05persona5.jpg "Persona")                         | Renato Hickmann                                                                                      |                                                                      |
+|                                                                       | Idade: 48 Ocupação: Dono de uma pequena empresa de sapatos.                                          | Aplicativos: Instagram  Airbnb  Facebook                             |
+| Motivações Financeira  Viagens  Ter a empresa como marca reconhecida  | Frustrações Conversas curtas  Perda de mercadoria por estar fora de moda   Perguntas mal respondidas | Hobbies, História Viajar  Jogar Cs:go com seus filhos                |
+| ![persona6](imagens/06persona6.jpg "Persona")                         | Andrea Camargos                                                                                      |                                                                      |
+|                                                                       | Idade: 60 Ocupação: Dona de uma Farmácia                                                             | Aplicativos: Instagram  Facebook  Ifood                              |
+| Motivações Família  Saúde                                             | Frustrações Fornecedores com altos preços    Dificuldade em encontrar produto no estoque             | Hobbies, História Academia  Passar o tempo com os netos              |
 
 ```
 2.2 Histórias de Usuários
@@ -141,7 +131,7 @@ A partir da compreensão do dia a dia das personas identificadas para o projeto,
 | Renato Hickmann | Dados com o número de vendas mensal de cada produto. | Realizar uma pesquisa de tendência de mercado com os dados fornecidos. |
 | Andréa Camargos | Obter registro e comparação dos preços de fornecedores. | Poder ajudar pessoas que necessitam de remédios e não possuem condições de comprar pelo valor original. |
 
-3**. Projeto da Solução**
+**3. Projeto da Solução**
 
 É necessário coletar os requisitos do projeto para atingir os objetivos,o processo inclui definir e documentar as necessidades das partes interessadas.
 
