@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-    <link rel="stylesheet" href="../../css/login.css" />
-    <script src='../../js/fakedb_login.js'></script>
+    <link rel="stylesheet" href="../css/login.css" />
+    <script src='../js/fakedb_login.js'></script>
     <title>MPSYS LOGIN</title>
 </head>
 
 <body>
     <header>
-        <img src="../../img/login/fundo.jpg" class="fundo" />
+        <img src="../img/login/fundo.jpg" class="fundo" />
         <div class="container-fluid">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 logo">
-                        <a href="../../html/mpsys/mpsys.html"><img src="../../img/logo2.png" alt="logo" class="logo" /></a>
+                        <a href="../index.html"><img src="../img/logo2.png" alt="logo" class="logo" /></a>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary">Entrar</button>
                         <p class="cadastro">
-                            Ainda não possui uma conta?<br> <a href="../../html/cadastro/cadastro.html"> Faça o cadastro agora. </a>
+                            Ainda não possui uma conta?<br> <a href="../html/cadastro.html"> Faça o cadastro agora. </a>
                         </p>
                     </form>
                 </div>
@@ -100,7 +100,7 @@
                 let dados = JSON.stringify(db_cadastros.cadastro[i-1]);
                 localStorage.setItem('dados',dados);
                 sessionStorage.setItem('log_in',0);
-                window.location.href = "../../html/home/home.html";
+                window.location.href = "home.html";
             }
             else {
                 let error = `<p id="emailHelp" class="form-text text-danger">Crendenciais Inválidas.</p>`;

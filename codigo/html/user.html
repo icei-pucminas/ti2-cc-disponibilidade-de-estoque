@@ -13,33 +13,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     
-    <link rel="stylesheet" href="../../css/user.css">
+    <link rel="stylesheet" href="../css/user.css">
     
         <!-- scripts para carregar cabeçalho de "standAloneHeader.html" em "header"-->
-        <link rel="stylesheet" href="../../css/standAloneHeader.css">
+        <link rel="stylesheet" href="../css/standAloneHeader.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script> 
             $(function(){
-            $("#standAloneHeader_V2").load("../../html/standaloneHeader.html/standAloneHeaderV2.html"); 
+            $("#standAloneHeader_V2").load("standAloneHeaderV2.html"); 
             });
-            $(function() {
-            var dados = JSON.parse(localStorage.getItem('dados'));
-
-            var username = dados.username;
-            var empresa = dados.empresa;
-            var taxa = dados.taxa;
-
-            console.log(username);
-            console.log(empresa);
-            console.log(taxa);
-            
-
-            document.getElementById('username').innerHTML = `<i class="far fa-user"></i> ${username}`;
-            document.getElementById('empresa').innerHTML = `<i class="fas fa-briefcase"></i> ${empresa}`;
-            document.getElementById('taxa').innerHTML = `<i class="fas fa-percent"></i> ${taxa}`;
-            document.getElementById('escolaridade').innerHTML = `${escolaridade}`;
-
-            })
         </script>
 </head>
 <body>
@@ -55,7 +37,7 @@
                     <br>
                     <div class="card" style="width: 18rem;">
                         
-                        <img src="../../img/User1.png" class="card-img-top" alt="...">
+                        <img src="../img/User1.png" class="card-img-top" alt="...">
                         <div class="card-body">
                           <h5 class="card-title">Ola Paolinelli</h5>
                           <p class="card-text">Organize sua pagina de maneira eficiente e facil com o sistema da MPSYS.</p>
@@ -148,6 +130,6 @@
      <!-- Font Awesome -->
      <script src="https://kit.fontawesome.com/a3121dc2ca.js" crossorigin="anonymous"></script>
      <!--User Page-->
-     <script src="user.js"></script>
+     <script src="../js/user.js"></script>
 </body>
 </html>
