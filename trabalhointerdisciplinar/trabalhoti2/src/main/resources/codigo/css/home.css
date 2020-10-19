@@ -1,0 +1,105 @@
+.bg-custom-light {
+    background-color: #F8F7E3;
+}
+
+.bg-custom-dark {
+    background-color: #32383E;
+}
+
+.bg-custom-purple {
+    background-color: #B98DEE;
+}
+
+.bg-custom-lightblue {
+    background-color: #55CED5;
+}
+
+.bg-custom-darkblue {
+    background-color: #3F3FBD;
+}
+
+body{
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F8F7E3;
+}
+  
+h3{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 10px;
+    margin-top: 30px;
+}
+
+.pesquisa_rapida, .atalhos, .tabela_info {
+    
+}
+
+.pesquisa_rapida {
+    height: auto;
+    overflow: scroll;
+    background-color: #e7e7e3;
+    border: thin solid black;
+    border-radius: 5px;
+    font-size: small;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .pesquisa_rapida 
+    .query {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        height: 38px;
+    }
+        .query .campo_pesquisa {
+            grid-column: 1 / 4;
+        }
+        .query .executa_pesquisa {
+            grid-column: 4 / 5;
+        }
+
+    .pesquisa_rapida 
+    .tabela_resultados_pesquisa {
+        
+    }
+
+
+.atalhos {
+    text-align: center;
+}
+
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(110px,1fr));
+    margin-left: auto;
+    margin-right: auto;
+    grid-gap: 5px;
+    
+}
+
+.botoes a button{
+    min-height: 65px;
+    width: 100%;
+    
+}
+
+.botoes a .botao_atalho:hover {
+    background: rgb(63,160,255);
+    background: radial-gradient(circle, rgba(63,160,255,1) 0%, rgba(96,158,255,1) 0%, rgba(194,139,236,1) 100%);
+}
+    
+
+.tabela_info {
+    min-width: 200px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
