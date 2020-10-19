@@ -217,17 +217,66 @@ Com relação à gestão do código fonte, o grupo utiliza um processo baseado n
 
 Descreva o mecanismo de inteligência que será utilizado no seu sistema. Utilize a modelagem baseada em agente para definir as entradas e saídas do seu módulo de serviço inteligente. Apresente quem irá fornecer o serviço e em que módulo será utilizado.
 
-**3. Modelagem de dados**
+**3.5. Modelagem de dados**
 
+Para a modelagem de dados, os integrantes do grupo fizeram a descrição do minimundo que envolve um sacolão, visto que houve a especificação de um tipo de estabelecimento para  esse projeto. Dessa forma: 
+
+- Um sacolão é determinado por seu CNPJ, além disso possui nome, um email a ele relacionado, uma senha para entrar no sistema.
+- Um sacolão possui N funcionários, sendo esses identificados por um código único, nome, cargo e salário.
+- Um sacolão pode emitir N notas fiscais, sendo que cada uma delas é identificada por seu número de nota fiscal, valor total e data de emissão.
+- As notas fiscais por sua vez possuem um ou mais itens, cada item possui uma descrição e a quantidade de produtos e refere-se a um lote de produto.
+- Os lotes dos produtos por sua vez são identificados por meio de um código único, descrição do lote, valor total do lote, data de validade, data de fabricação, valor unitário, quantidade disponível no estoque e categoria.
+- Cada lote possui um fornecedor, sendo este identificado por meio de um código único e nome.
 ```
-3.5 Diagrama de Entidade-Relacionamento
+3.5.1 Modelo Entidade-relacionamento
 ```
 
-Para melhor compreensão dos dados e de seus relacionamentos foi elaborado o Diagrama de Entidade-Relacionamento abaixo, tendo como base a seguinte descrição de minimundo:
+Com base na descrição anteriormente apresentada, desenvolveu-se um diagrama Entidade-relacionamento para representar os dados do minimundo e a relação entre eles.
 
-Um sacolão é determinado por seu CNPJ, e possui atributos como nome e endereço. Cada sacolão possui X funcionários, sendo esses identificados por um código único, nome, cargo e salário. Além disso, um sacolão pode emitir X notas fiscais, sendo que cada uma delas é identificada por seu número de nota fiscal, valor total e data de emissão. As notas fiscais por sua vez possuem um ou mais itens, cada item possui uma descrição e a quantidade de produtos e refere-se a um lote. Os lotes dos produtos são identificados por meio de um código único, descrição do lote, valor total do lote, data de validade, data de fabricação, valor unitário, quantidade disponível no estoque e categoria, cada lote possui um fornecedor, sendo este identificado por meio de um código único e nome.
+![Diagrama_Er](imagens/newMERmodel.png  "Diagrama Entidade-Relacionamento")
+```
+3.5.2 Modelo Relacional
+```
+Após desenvolver o modelo entidade- relacionamento, para realizar uma melhor visualização de dados, mais próxima ao que seria nas tabelas do SGBD, o grupo desenvolveu o modelo relacional dos dados, como mostrado a seguir. 
 
-![Diagrama_Er](imagens/diagrama_er.png "Diagrama Entidade-Relacionamento")
+![Modelo Relacional](imagens/ERmodel.jpeg "Modelo relacional")
+
+Nesse modelo, há as tabelas do banco de dados com seus respectivos, dados e tipos de dados. Vale ressaltar que o dado que possui uma chave amarela é tido como a chave primjária, e dado que possui um losango vermelho seria uma chave estrangeira. 
+```
+3.5.3 Aplicação prática dos modelos 
+```
+Para a aplicação e armazenamento do banco de dados, que foi projetado de acordo com o exposto, o grupo utilizou o SGBD PostgreSQL e para gerenciá-lo, o grupo utilizou o phpgAdmin.
+
+![PostgreSQL](imagens/PostgreSQL.png "PostgreSQL")
+
+
+> PostgreSQL 
+
+
+![PohpgAdmin](imagens/phpadmin.png "PhpgAdmin")
+
+
+> Exemplo da interface do phpgAdmin para admninistrar o banco de dados
+
+
+Nessa plataforma, foi criado o banco de dados "controle de estoque" com suas respectivas tabelas, linhas e colunas. Para fazermos a conexão do banco de dados com o site, foi utilizado o backend feito em Java e o Apache Spark aplicado em projeto Maven no Eclipse, que possui ferramentas para trabalhar com base de dados e SQL, para fazer as rotas de conexão. Assim, o usuário do site digita  as informações que deseja cadastrar ou verificar nos formulário, e, por meio das requisições HTTP e queries , conseguimos  anexar os dados passados no nosso banco. O código está disponível na pasta "ti2cc/trabalhointerdisciplinar". 
+
+![Conexões](imagens/conexoes.png "Conexões")
+
+>Conexão do Banco de Dados ao site por meio do backend 
+
+Até o momento, o grupo fez o cadastro de lotes de produtos no banco de dados, a conexão do login com o Banco de dados, e o código para cadastro de sacolão/usuário, sendo que esse último precisa de alguns ajustes para funcionar corretamente. As perspectivas futuras são de fazer o cadastro de funcionários, de fornecedores, consulta e venda dos produtos da mesma forma em que fizemos até o momento. 
+A seguir, há o exemplo do cadastro de um lote de produtos, no caso, de morangos. 
+
+![Cadastro de produtos](imagens/adicionar_lote_morango.jpeg "Cadastro de lote de morangos")
+
+>Cadastro de um lote de morangos
+
+![Cadastro de produtos no banco de dados](imagens/morango_adc.jpeg "Cadastro de lote de morangos no banco de dados")
+
+>Cadastro de um lote de morangos no banco de dados
+
+
 
 **4. Sistema desenvolvido**
 
