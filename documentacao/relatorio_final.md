@@ -219,13 +219,13 @@ Descreva o mecanismo de inteligência que será utilizado no seu sistema. Utiliz
 
 **3. Modelagem de dados**
 
-Apresente o modelo de dados. Defina o dicionário de dados com os respectivos formatos e significados.
-
 ```
 3.5 Diagrama de Entidade-Relacionamento
 ```
 
-Apresente a estrutura das tabelas de banco de dados no modelo Diagrama de Entidade-Relacionamento. A Seguir, segue um exemplo de imagem adicionada ao documento.
+Para melhor compreensão dos dados e de seus relacionamentos foi elaborado o Diagrama de Entidade-Relacionamento abaixo, tendo como base a seguinte descrição de minimundo:
+
+Um sacolão é determinado por seu CNPJ, e possui atributos como nome e endereço. Cada sacolão possui X funcionários, sendo esses identificados por um código único, nome, cargo e salário. Além disso, um sacolão pode emitir X notas fiscais, sendo que cada uma delas é identificada por seu número de nota fiscal, valor total e data de emissão. As notas fiscais por sua vez possuem um ou mais itens, cada item possui uma descrição e a quantidade de produtos e refere-se a um lote. Os lotes dos produtos são identificados por meio de um código único, descrição do lote, valor total do lote, data de validade, data de fabricação, valor unitário, quantidade disponível no estoque e categoria, cada lote possui um fornecedor, sendo este identificado por meio de um código único e nome.
 
 ![Diagrama_Er](imagens/diagrama_er.png "Diagrama Entidade-Relacionamento")
 
