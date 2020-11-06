@@ -217,7 +217,9 @@ Com relação à gestão do código fonte, o grupo utiliza um processo baseado n
 
 Descreva o mecanismo de inteligência que será utilizado no seu sistema. Utilize a modelagem baseada em agente para definir as entradas e saídas do seu módulo de serviço inteligente. Apresente quem irá fornecer o serviço e em que módulo será utilizado.
 
-**3.5. Modelagem de dados**
+```
+3.5. Modelagem de dados
+```
 
 Para a modelagem de dados, os integrantes do grupo fizeram a descrição do minimundo que envolve um sacolão, visto que houve a especificação de um tipo de estabelecimento para  esse projeto. Dessa forma: 
 
