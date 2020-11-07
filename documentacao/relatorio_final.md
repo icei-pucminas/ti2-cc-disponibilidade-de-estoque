@@ -215,7 +215,20 @@ Com relação à gestão do código fonte, o grupo utiliza um processo baseado n
 3.4. Serviços inteligentes
 ```
 
-Descreva o mecanismo de inteligência que será utilizado no seu sistema. Utilize a modelagem baseada em agente para definir as entradas e saídas do seu módulo de serviço inteligente. Apresente quem irá fornecer o serviço e em que módulo será utilizado.
+O mecanismo de inteligência utilizado no sistema será um chatbot. Para isso, o chatbot em questão será programado de modo a simular a conversação de um ser humano, utilizando conhecimento externo como base para suas respostas, assim sendo terá como objetivo auxiliar o usuário do site, fornecendo informações sobre como utilizar os diversos serviços oferecidos. 
+
+A tabela a seguir apresenta os requisitos funcionais do chatbot, identificando a prioridade em que os mesmos devem ser entregues.
+
+| No.           | Descrição                       | Prioridade |
+| ------------- |:-------------------------------:| ----------:|
+|RF-01		|O chatbot deve ser capaz de reconhecer o objetivo específico ou ideia que o usuário deseja transmitir em uma mensagem | Alta |     
+|RF-02		|O chatbot deve fornecer uma respota clara utliziando uma base de conhecimento.  | Alta |
+|RF-03		|O chatbot deve ser capaz de esclarecer informações sobre o funcionamento do site |  Alta   |           
+|RF-04		|O chatbot deve fornecer informações sobre como cadastrar, atualizar ou excluir um produto| Alta   |
+|RF-05		|O chatbot deve fornecer informações sobre como gerar um relatório no site| Alta   |            
+|RF-06		|O chatbot deve fornecer informações sobre os desenvolvedores, além de um meio para contatá-los. | Média     |           
+
+Dessa forma, com base nos requisitos definidos acima o chatbot implementado no site será desenvolvido na plataforma BliP, a partir do uso de tecnologias como ferramentas de análise, APIs para efetivação dos serviços e algoritmos de Processamento de Linguagem Natural - PNL (do inglês Natural Language Processing - NLP), responsáveis por extrair o desejo dos usuários nas frases enviadas para o bot.
 
 ```
 3.5. Modelagem de dados
@@ -305,8 +318,7 @@ Nesta seção, as telas do sistema serão esmiuçadas a fim de oferecer esclarec
 - **Perfil de usuário** - apresenta o perfil em que o usuário está logado.
 - **Conteúdo: Área de trabalho do sistema.**
 
-![https://lh4.googleusercontent.com/goLBhfxtEQs_gGBV4gRJhmmkqG-Spfl8z6Uo9jC8moPDjSdd3Wxq7_qp9GsOArtG1EMS0pZ5NwOZWq-sRzg3SdMJnhmSXU_Kv9akbEuWmftk65bSv4QWBwGtQJEYfpgCLSHEl_w2]
-!(https://lh4.googleusercontent.com/goLBhfxtEQs_gGBV4gRJhmmkqG-Spfl8z6Uo9jC8moPDjSdd3Wxq7_qp9GsOArtG1EMS0pZ5NwOZWq-sRzg3SdMJnhmSXU_Kv9akbEuWmftk65bSv4QWBwGtQJEYfpgCLSHEl_w2)
+![estrutura padrao](imagens/08estrutura.jpg "estrutura padrao")
 
 Figura 2 - Estrutura padrão do sistema
 
@@ -322,7 +334,7 @@ A página é composta por um cabeçalho com informações de contato, uma barra 
 
 No presente momento, apenas o link “*Entrar”* encontra-se disponível.
 
-[https://lh5.googleusercontent.com/34nJb5MiL2zyoAOloz1bRUrG0uJLx9VR_gRCmxGxI7NA32icBzGKe5NWNj8f8P9eyqYZRMBwkX09FSKMM1yFHXqBhkDu_v47iBGfaaoEwHlG4C0Z3YZxQpIrp85jNsRXbkpc5txp](https://lh5.googleusercontent.com/34nJb5MiL2zyoAOloz1bRUrG0uJLx9VR_gRCmxGxI7NA32icBzGKe5NWNj8f8P9eyqYZRMBwkX09FSKMM1yFHXqBhkDu_v47iBGfaaoEwHlG4C0Z3YZxQpIrp85jNsRXbkpc5txp)
+![tela inicial](imagens/09telainicial.jpg "tela inicial")
 
 Figura 3 - Tela Inicial
 
@@ -332,7 +344,7 @@ Figura 3 - Tela Inicial
 
 A tela de login (figura 4), exige inserção de campo de e-mail e senha para acesso ao sistema. Caso o usuário não seja cadastrado, deverá clicar em “*faça o cadastro agora”*.
 
-[https://lh5.googleusercontent.com/Pwh4MAvHhzdfMjKGpg4d6hMWqZ1C5yXO9s2XwIgQ0We3zOJZMRfzrqKO-uottqfEpaD5x1YwWoXZRJbj9UzKlK38e3deW5WmVIz0PwczysGCzFpVbSu2DgVDszUZkQ7OqkeHuB9Y](https://lh5.googleusercontent.com/Pwh4MAvHhzdfMjKGpg4d6hMWqZ1C5yXO9s2XwIgQ0We3zOJZMRfzrqKO-uottqfEpaD5x1YwWoXZRJbj9UzKlK38e3deW5WmVIz0PwczysGCzFpVbSu2DgVDszUZkQ7OqkeHuB9Y)
+![tela de login](imagens/10login.jpg "tela de login")
 
 Figura 4 - Tela de Login
 
@@ -344,7 +356,7 @@ Caso seja um novo usuário, deverá obrigatoriamente passar pela tela de cadastr
 
 Após isso, você será levado de volta para a tela de Login (figura 4) para confirmação de seu login.
 
-[https://lh4.googleusercontent.com/DmhvtNC8kO0e6qdP1uQfomJxfQ24dz_AYH0F_9RDWc_IFgZUalzAhu6D79t3rEa_t7JpROivTS4UA9acvajTIWJqQ8rp5zPMMriQ6P0HdsrArTVORaP_dgUPv22Vny3QTSlweZ6b](https://lh4.googleusercontent.com/DmhvtNC8kO0e6qdP1uQfomJxfQ24dz_AYH0F_9RDWc_IFgZUalzAhu6D79t3rEa_t7JpROivTS4UA9acvajTIWJqQ8rp5zPMMriQ6P0HdsrArTVORaP_dgUPv22Vny3QTSlweZ6b)
+![tela de cadastro de usuario](imagens/11cadastro.jpg "tela de cadastro de usuario")
 
 Figura 5 - Cadastro de Usuário
 
@@ -354,15 +366,15 @@ Figura 5 - Cadastro de Usuário
 
 A tela de acesso rápido é composta pelo logo do sistema(que ao clicar leva para esta tela), um menu de navegação rápida, uma área de exibição dos dados do usuário logado, e uma home com funcionalidades para acesso rápido e relevante de informações. Na Navbar, marcada pelo marcador roxo na imagem abaixo, apenas o *dropdown* Produtos e as Opções estão com funcionalidades, onde está marcado com a cor verde.
 
-[https://lh3.googleusercontent.com/-Gojv8N77XnRSDhouzDEd6wa7FoD_K16bgqGoTVjhL8_TF6nLhs9WhsB2ZqwAofzNvl-sqe07aRvX8eY2tWBTCifAJMvI7uUQp6xykYD2rWu79OVtzCQN2Opuyn2Ya5DYsfCLOWU](https://lh3.googleusercontent.com/-Gojv8N77XnRSDhouzDEd6wa7FoD_K16bgqGoTVjhL8_TF6nLhs9WhsB2ZqwAofzNvl-sqe07aRvX8eY2tWBTCifAJMvI7uUQp6xykYD2rWu79OVtzCQN2Opuyn2Ya5DYsfCLOWU)
+![tela de acesso rapido](imagens/12acessorapido.jpg "tela de cadastro de acesso rapido")
 
 Figura 6.1 - Acesso Rápido
 
-[https://lh6.googleusercontent.com/H_qHTPC14_IqTg0cN0jvl-TYMBacIGj3VTGWVm-pf9bhfjNDzKzK2u4GC6ADoA7jod2TswqYzWKKHvnF8aT9gytu9aDekpaB0I1aznQbe6kiXj6tLjQZFpLJVhF6hJ18aNxseaWW](https://lh6.googleusercontent.com/H_qHTPC14_IqTg0cN0jvl-TYMBacIGj3VTGWVm-pf9bhfjNDzKzK2u4GC6ADoA7jod2TswqYzWKKHvnF8aT9gytu9aDekpaB0I1aznQbe6kiXj6tLjQZFpLJVhF6hJ18aNxseaWW)
+![tela navbar produtos](imagens/13navbarprodutos.jpg "[tela navbar produtos")
 
 Figura 6.2 - Navbar Produtos
 
-[https://lh3.googleusercontent.com/u6LWrE7YvrA-NlCqwEDvgkf-ImjHNAyAySex6TI7erk7RovitN5RIGOWT8zoMwdNPbZFDnv8e3DKKG5AGgRseisl20K2Demds-Zkm_8V0DP3DjFgKRGZLOPq887VFIAKXuymZRJo](https://lh3.googleusercontent.com/u6LWrE7YvrA-NlCqwEDvgkf-ImjHNAyAySex6TI7erk7RovitN5RIGOWT8zoMwdNPbZFDnv8e3DKKG5AGgRseisl20K2Demds-Zkm_8V0DP3DjFgKRGZLOPq887VFIAKXuymZRJo)
+![tela navbar opcoes](imagens/14navbaropcoes.jpg "[tela navbar opcoes")
 
 Figura 6.3 - Navbar Opções
 
@@ -376,7 +388,7 @@ Já o que está rodeado pelo marcador vermelho, é uma estrutura vazia de intera
 
 Nesta tela, será solicitado ao operador do sistema que insira a descrição, código, categoria, quantidade, valor de aquisição do material adquirido e localização a ser armazenado. Poderão ser modificados ou adicionados novos campos futuramente de acordo com as necessidades de cada empresa. Ao clicar em “*adicionar ao estoque”* o material será cadastrado localmente no dispositivo, em formato JSON, por meio do *localStorage*.
 
-[https://lh3.googleusercontent.com/2K6_E7HrrP8bCgFA3Uvor9AfJtIP3XBbqHhID6aakZJ506XzdwFZSc68KP9Al_SrH_Vu_HaZBW29d5-PsM5D9iVoyTQoDhqMM8tOdgxV-ow5vBpUu-9MDTzHh2-TdW1C-CUjoSAT](https://lh3.googleusercontent.com/2K6_E7HrrP8bCgFA3Uvor9AfJtIP3XBbqHhID6aakZJ506XzdwFZSc68KP9Al_SrH_Vu_HaZBW29d5-PsM5D9iVoyTQoDhqMM8tOdgxV-ow5vBpUu-9MDTzHh2-TdW1C-CUjoSAT)
+![tela cadastro materiais](imagens/15cadastromateriais.jpg "tela cadastro materias")
 
 Figura 7 - Cadastro de Materiais
 
@@ -386,15 +398,15 @@ Figura 7 - Cadastro de Materiais
 
 Nesta tela (figura 8), o operador deverá inserir os parâmetros de pesquisa e clicar em “*Consultar no Estoque”*. Será apresentado o resultado da pesquisa logo abaixo. O usuário poderá clicar em “*+ detalhes”* para exibir a tela contida na figura 9. Planeja-se implementar uma função onde poderá adicionar o item à “lista de reabastecimento” por meio desta tela.
 
-[https://lh4.googleusercontent.com/3H0W7SVs9ufpqMktfyoCfINXJ00dSY7iQyYSIasptiTe4OAAqVKtIqCejm66VN_5vcTAxTmg1BhTFtwFgRKahRX25fp8L-Z6hMlGm9mbyog3PuaZut-MKRXFzicQMhHeaNe2A7AO](https://lh4.googleusercontent.com/3H0W7SVs9ufpqMktfyoCfINXJ00dSY7iQyYSIasptiTe4OAAqVKtIqCejm66VN_5vcTAxTmg1BhTFtwFgRKahRX25fp8L-Z6hMlGm9mbyog3PuaZut-MKRXFzicQMhHeaNe2A7AO)
+![tela consulta estoque](imagens/16consultaestoque.jpg "tela consulta estoque")
 
 Figura 8 - Consulta de Estoque
 
-[https://lh5.googleusercontent.com/HaGXjMT-7W9EMq3BT098SSDsOGmdjF5eDboRN6hBcJ_vg2Gl7j-0LaqCTkSBOnyv4IZI8K96Yy8qaO9HQAr2XyeJ6Q1xr1EOuir5lV5qxoeccqeM4AsuvVfVXg4n4sG2Xi7Aqtdj](https://lh5.googleusercontent.com/HaGXjMT-7W9EMq3BT098SSDsOGmdjF5eDboRN6hBcJ_vg2Gl7j-0LaqCTkSBOnyv4IZI8K96Yy8qaO9HQAr2XyeJ6Q1xr1EOuir5lV5qxoeccqeM4AsuvVfVXg4n4sG2Xi7Aqtdj)
+![tela cdetalhes produto](imagens/17detalhesproduto.jpg "tela detalhes produto")
 
 Figura 9 - Detalhes do Produto
 
-[https://lh6.googleusercontent.com/R8QxBsQtVftSQW-h-_rvMIH1NFN86yHQU9YDNCf03tSyUuutm-D8XABIiTe757Ql1jmC6Njs6ajgRpU263QY6ARUx_0aZhRfL8hHJKpK9fIIQO5X5sY4FZhpKxUp_B4zM_ftYcWV](https://lh6.googleusercontent.com/R8QxBsQtVftSQW-h-_rvMIH1NFN86yHQU9YDNCf03tSyUuutm-D8XABIiTe757Ql1jmC6Njs6ajgRpU263QY6ARUx_0aZhRfL8hHJKpK9fIIQO5X5sY4FZhpKxUp_B4zM_ftYcWV)
+![tela consulta ao estoque](imagens/18percentual.jpg "tela consulta ao estoque")
 
 Figura 10 - consulta ao percentual de estoque disponível
 
@@ -404,7 +416,7 @@ Figura 10 - consulta ao percentual de estoque disponível
 
 Nesta tela (figura 11), o operador deverá inserir os parâmetros de pesquisa com base na descrição do produto na parte mais abaixo da tela. Os resultados serão exibidos logo abaixo e o usuário deverá clicar na linha do produto que deseja vender. Ao fazê-lo, a caixa com as descrições do material será preenchida com as informações e, a seguir, o usuário deverá informar a quantidade de itens que deseja vender e clicar no botão verde para confirmar a venda.
 
-[https://lh6.googleusercontent.com/z1-NH890kUIkZaQ9FegH1VKJybgpJFFecBn3OBMtR0JCfyhkr4G3gUvVEVPRhACYA-FNWgybaOGCylMd-sWV6kqzEMdRZyISdMfvv9rhiUKu5l3GTQjczu0N6VQSEdqPw9wUxDEi](https://lh6.googleusercontent.com/z1-NH890kUIkZaQ9FegH1VKJybgpJFFecBn3OBMtR0JCfyhkr4G3gUvVEVPRhACYA-FNWgybaOGCylMd-sWV6kqzEMdRZyISdMfvv9rhiUKu5l3GTQjczu0N6VQSEdqPw9wUxDEi)
+![tela vendas](imagens/19venda.jpg "tela vendas")
 
 Figura 11 - Tela de Vendas
 
@@ -414,11 +426,11 @@ Figura 11 - Tela de Vendas
 
 Nessa funcionalidade, está implementado a seção de Compras. Essa função foi idealizada para que o cliente possa cadastrar compras feitas com distribuidores, que devem ser cadastrados em uma tela que ainda há de ser construída. Por enquanto, é possível cadastrar e excluir uma compra cadastrada. A opção de concluir compra ainda está em desenvolvimento já que ela envolve muitas outras partes e funcionalidades do sistema. Espera-se na próxima entrega estar com ela em mão.
 
-[https://lh6.googleusercontent.com/BnCAgsY_Wzuf23dwUhBqf0WMQhzn9xcLw9k8b0YZ16-agfEA5xwlWdHyQyoRogWuwcpf-F89DHUZAsTeQ4JyIZT1cZHOWLVh8e97kuWzQHaBpQxSffQ4StIaXkuh4fpqott4139f](https://lh6.googleusercontent.com/BnCAgsY_Wzuf23dwUhBqf0WMQhzn9xcLw9k8b0YZ16-agfEA5xwlWdHyQyoRogWuwcpf-F89DHUZAsTeQ4JyIZT1cZHOWLVh8e97kuWzQHaBpQxSffQ4StIaXkuh4fpqott4139f)
+![tela cpmpras](imagens/20compra.jpg "tela compras")
 
 Figura 12 - Tela de Compras
 
-[https://lh5.googleusercontent.com/86HnZeoUZQwSyBsOLlxVLgD4-wYHG820U_kxjQnjklLM6IChi4s5iih0WOEXUZ8Fz6kLRH4FvPE7_YOlcWle-VatnHPE8N7_PyW9PgKSJzyIwS3W8Hyc3Zas6ceeZZnkqW2O6ITM](https://lh5.googleusercontent.com/86HnZeoUZQwSyBsOLlxVLgD4-wYHG820U_kxjQnjklLM6IChi4s5iih0WOEXUZ8Fz6kLRH4FvPE7_YOlcWle-VatnHPE8N7_PyW9PgKSJzyIwS3W8Hyc3Zas6ceeZZnkqW2O6ITM)
+![tela cpmpras](imagens/21listadeaguardo.jpg "tela compras")
 
 Figura 13 - Tela de Compras - Lista de aguardo
 
@@ -503,25 +515,25 @@ Abaixo, seguem as instruções fornecidas ao usuários:
 
 Registro dos Resultados do teste:
 
-[https://lh3.googleusercontent.com/xxxqSj2RykQvtNyJTEAKMx8-zBfgjGcFqD5k3x90Oixv--GrYAtjN8nKOE1lSmZvuP83nQa1mTmJam-IfRc6NmN3vDPEfhuagkKfg9n7UWW5-cCrkkmmvv4DYRRBLW8vaBt7UQz0](https://lh3.googleusercontent.com/xxxqSj2RykQvtNyJTEAKMx8-zBfgjGcFqD5k3x90Oixv--GrYAtjN8nKOE1lSmZvuP83nQa1mTmJam-IfRc6NmN3vDPEfhuagkKfg9n7UWW5-cCrkkmmvv4DYRRBLW8vaBt7UQz0)
+![teste](imagens/22teste1.jpg "teste")
 
-[https://lh4.googleusercontent.com/hWVnSPS8r15-rUA-W48AUh87BKDDMM-aZjNSIyo84SIzr6DPC8Dp6o_eH-Z3UUOoAqP2tfBaTRfva1cnQ9zQBBk85unX9oWvgKsqQrhLxF09H6pwiUWG-Iv6BW1MdY71WB4OwHob](https://lh4.googleusercontent.com/hWVnSPS8r15-rUA-W48AUh87BKDDMM-aZjNSIyo84SIzr6DPC8Dp6o_eH-Z3UUOoAqP2tfBaTRfva1cnQ9zQBBk85unX9oWvgKsqQrhLxF09H6pwiUWG-Iv6BW1MdY71WB4OwHob)
+![teste](imagens/23teste2.jpg "teste")
 
-[https://lh6.googleusercontent.com/pn4u6OTU7WOq4GeD7i-x_UitWVAhhrgazeExiB8utnqm29j4sRhnbyI7rDXZ2dmEIJrnqHPgO1OA6vO0tNOTdX3jlUkMF5kLArdbfkVYwm-bF9ZerwOD6zqDY2GPrdXEDRd5tWDo](https://lh6.googleusercontent.com/pn4u6OTU7WOq4GeD7i-x_UitWVAhhrgazeExiB8utnqm29j4sRhnbyI7rDXZ2dmEIJrnqHPgO1OA6vO0tNOTdX3jlUkMF5kLArdbfkVYwm-bF9ZerwOD6zqDY2GPrdXEDRd5tWDo)
+![teste](imagens/24teste3.jpg "teste")
 
-[https://lh3.googleusercontent.com/0mV0vdF3MKobVBF0NqwXu70NBgWgyLQv0U_GeCDAaHVHH5V1WjPvHvAhJ3zNijBJ4l4ag7Bg8BwIId3E9u-8_eMXTWJRFv7J_E0RE29qjL6eYLwWT202dn2mWl0mILexr5pJ-7qq](https://lh3.googleusercontent.com/0mV0vdF3MKobVBF0NqwXu70NBgWgyLQv0U_GeCDAaHVHH5V1WjPvHvAhJ3zNijBJ4l4ag7Bg8BwIId3E9u-8_eMXTWJRFv7J_E0RE29qjL6eYLwWT202dn2mWl0mILexr5pJ-7qq)
+![teste](imagens/25teste4.jpg "teste")
 
-[https://lh3.googleusercontent.com/6foVaIXUeml7BZ3kuVO0jRLXY7LEVaEtBOkkLEAzhGz7dYC-CIIfFRJ2692I4JfCMCs3xkNeU0QmHO964tBPCucKNBA11ZgaS3g_wSgJsbNZbXpsINwTOz3FLvt450izgka1JI3y](https://lh3.googleusercontent.com/6foVaIXUeml7BZ3kuVO0jRLXY7LEVaEtBOkkLEAzhGz7dYC-CIIfFRJ2692I4JfCMCs3xkNeU0QmHO964tBPCucKNBA11ZgaS3g_wSgJsbNZbXpsINwTOz3FLvt450izgka1JI3y)
+![teste](imagens/26teste5.jpg "teste")
 
-[https://lh5.googleusercontent.com/l3ZujSjtLFtPs84lRvTOwlyOkQVURQpaWWXm3uqZ0r-m9KK6VJvjRW1Q2BphFjBQt3GYidudboDe2C2ntuCAOrlvtgJZRncrSTdl7uzy-t3Je-h65MrTFNGwy7zey19YgzKTsFZG](https://lh5.googleusercontent.com/l3ZujSjtLFtPs84lRvTOwlyOkQVURQpaWWXm3uqZ0r-m9KK6VJvjRW1Q2BphFjBQt3GYidudboDe2C2ntuCAOrlvtgJZRncrSTdl7uzy-t3Je-h65MrTFNGwy7zey19YgzKTsFZG)
+![teste](imagens/27teste6.jpg "teste")
 
-[https://lh4.googleusercontent.com/FwkAqOrOLdPRlQzD76-z0cpur8IplKTVEXizPTL8LFzcfsj79eNXadtj_TMmlYPbb6fjFNFTad2_IpMhz21zX6m-ZXNGkn4-hTK9tc_Q1Zhi1O69-2GmWxHE5ze-XmlDg1I2VZTC](https://lh4.googleusercontent.com/FwkAqOrOLdPRlQzD76-z0cpur8IplKTVEXizPTL8LFzcfsj79eNXadtj_TMmlYPbb6fjFNFTad2_IpMhz21zX6m-ZXNGkn4-hTK9tc_Q1Zhi1O69-2GmWxHE5ze-XmlDg1I2VZTC)
+![teste](imagens/28teste7.jpg "teste")
 
-[https://lh3.googleusercontent.com/OYXVR2s_rNBsqZSw5VaEuqnbV-fDbMX8I5sxYz94v_0HH3oTmYnalQ0MkIKyrFDOF19Euv54IaMelbvcnR3WjBOD6v0JMFg9U0ZiSUQ_1XkJIlmqVffYGbvAVBNTckdX1FwNRbf9](https://lh3.googleusercontent.com/OYXVR2s_rNBsqZSw5VaEuqnbV-fDbMX8I5sxYz94v_0HH3oTmYnalQ0MkIKyrFDOF19Euv54IaMelbvcnR3WjBOD6v0JMFg9U0ZiSUQ_1XkJIlmqVffYGbvAVBNTckdX1FwNRbf9)
+![teste](imagens/29teste8.jpg "teste")
 
-[https://lh3.googleusercontent.com/O47klMgnoG7ckzOBC9MZ1_5PzmtzNOLlfpu8nQ_mBbKAt7L7nDYKXfvDA63eylTaZsMgKsqxQbqSKh94kFvRbLCTeuKtotLnw43-lDFBlsR968I1HyB4MoZx7Pt79Uk4CjgHwvNS](https://lh3.googleusercontent.com/O47klMgnoG7ckzOBC9MZ1_5PzmtzNOLlfpu8nQ_mBbKAt7L7nDYKXfvDA63eylTaZsMgKsqxQbqSKh94kFvRbLCTeuKtotLnw43-lDFBlsR968I1HyB4MoZx7Pt79Uk4CjgHwvNS)
+![teste](imagens/30teste9.jpg "teste")
 
-[https://lh3.googleusercontent.com/kjzTpwF8VnCcHmN6s7ZfqU36KHraEKfn2iE0TOUx_470piE4I6Njoom2-xqa1Xw6KzwL7Wczv6R21R5oiDahs64F3leMLeSX0MPBguqq2sQPjz0UPnG_Nhv0kwaTbptZAsXq365d](https://lh3.googleusercontent.com/kjzTpwF8VnCcHmN6s7ZfqU36KHraEKfn2iE0TOUx_470piE4I6Njoom2-xqa1Xw6KzwL7Wczv6R21R5oiDahs64F3leMLeSX0MPBguqq2sQPjz0UPnG_Nhv0kwaTbptZAsXq365d)
+![teste](imagens/31teste10.png "teste")
 
 ```
 5.4 Teste - Heurísticas de Nielsen
