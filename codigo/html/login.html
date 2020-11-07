@@ -64,50 +64,29 @@
         </div>            
     </footer>
     <script>
-        // Recupera lista de cadastrados em localStorage
-        var db_cadastros = JSON.parse(localStorage.getItem('cadastro'));
-
-        // Verifica se email e senha batem com os registrados em fakedb_login.js
-        let verificaLoginDB_Login = (email, senha, i) => {
-            if((db_login.dados[i].email == email && db_login.dados[i].senha == senha)){
-                return true;
-            }
-            else{
-                return false;
-            }
-        }
-
-        // Verifica se email e senha batem coms os registrados em localStorage
-        let verificaLoginDB_Cadastro = (email, senha, i) => {
-            if((db_cadastros.cadastro[i].email == email && db_cadastros.cadastro[i].senha == senha)){
-                return true;
-            }
-            else{
-                return false;
-            }
-        }
-
-        login.onsubmit = (e) => {
-            let i = 0;
-            let credenciaisValidas = false;
-            let item = db_cadastros.cadastro;
-            while(!credenciaisValidas && i < item.length) {
-                credenciaisValidas = verificaLoginDB_Cadastro(email.value, senha.value, i);
-                i++;
-            } 
-
-            if(credenciaisValidas) {
-                let dados = JSON.stringify(db_cadastros.cadastro[i-1]);
-                localStorage.setItem('dados',dados);
-                sessionStorage.setItem('log_in',0);
-                window.location.href = "home.html";
-            }
-            else {
-                let error = `<p id="emailHelp" class="form-text text-danger">Crendenciais Inválidas.</p>`;
-                document.getElementById('emailHelp').outerHTML = error;
-            }
-            
+         //Executa funcao de login
+         login.onsubmit = (e) => {
             e.preventDefault();
+            var email = document.getElementById("email").value;
+            var senha = document.getElementById("senha").value;
+
+            var params = "email="+email+"&senha="+senha;
+            var xhttp = new XMLHttpRequest();
+            
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    window.location.href = "home.html";
+                 }
+                 else
+                 {
+                    let error = `<p id="emailHelp" class="form-text text-danger">Crendenciais Inválidas.</p>`;
+                    document.getElementById('emailHelp').outerHTML = error;
+                 }
+                
+            }
+            xhttp.open("POST", "/usuarios/search", true);
+            xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhttp.send(params);
         }
     </script>
 

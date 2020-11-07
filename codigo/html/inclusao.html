@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -34,9 +35,8 @@
   <main>
 
     <div class="titulo">
-      <h3>INCLUSÃO DE MATERIAL EM ESTOQUE</h3>
+      <h3>INCLUSÃO DE UM LOTE</h3>
     </div>
-    <!--FORMULÁRIO-->
     <div class="form-row">
       <!-- input descrição -->
       <div class="col-12 col-sm-9 mb-3"> 
@@ -45,17 +45,23 @@
       </div>
 
       <div class="col-12 col-sm-3 mb-3"> 
-        <label for="l_data_validade"><strong>Data de Validade</strong></label>
-        <input type="date" class="form-control" id="validade">
+        <label for="l_data_validade"><strong>Data da Compra</strong></label>
+        <input type="date" class="form-control" id="compra">
       </div>
 
     </div>
 
 
     <div class="form-row"> <!-- nova linha -->
+
+      <div class="col-12 col-sm-3 mb-3"> 
+        <label for="l_data_validade"><strong>Data de Validade</strong></label>
+        <input type="date" class="form-control" id="validade">
+      </div>
+
       <div class="col-sm-3 mb-3"> 
-        <label for="l_codigo"><strong>Código</strong></label>
-        <input type="text" class="form-control" id="codigo" value="XX.XX.XX">
+        <label for="l_codigo"><strong>ID_Item</strong></label>
+        <input type="text" class="form-control" id="codigo" value="1 Maca, 2 Banana">
       </div>
 
       <div class="col-sm-3 mb-3">
@@ -76,23 +82,22 @@
       </div>
 
       <div class="col-sm-3 mb-3">
+        <label for="l_valor"><strong>Valor da Compra</strong></label>
+        <input type="number" class="form-control" id="valor_compra" value="0.00">
+      </div>
+
+      <div class="col-sm-3 mb-3">
         <label for="l_valor"><strong>Valor unitário</strong></label>
-        <input type="number" class="form-control" id="valor" value="0.00">
+        <input type="number" class="form-control" id="valor_uni" value="0.00">
       </div>
 
     </div>
 
-
-    <div class="form-row">
-      <div class="col-sm-3 mb-3">
-        <label for="l_armazem">Local</label>
-        <input type="text" class="form-control" id="local">
-      </div>
 
     </div>
 
     <div class="col-12 botao_adicionar">
-      <button class="btn btn-primary" id="btnRegistrar" type="submit">Adicionar ao estoque</button>
+      <button class="btn btn-primary" id="btnRegistrar" onclick="adicionarLote()" type="submit">Adicionar o Lote</button>
     </div>
     <br>
     <div id="tabela">
@@ -119,6 +124,26 @@
 
   </main>
 
+  <script>
+    function adicionarLote(){
+      let descricao = document.getElementById("descricao").value;
+      let data_compra = document.getElementById("compra").value;
+      let data_validade = document.getElementById("validade").value;
+      let id_item = document.getElementById("codigo").value;
+      let categoria = document.getElementById("categoria").value;
+      let quantidade = document.getElementById("quantidade").value;
+      let valor_compra = document.getElementById("valor_compra").value;
+      let valor_uni = document.getElementById("valor_uni").value;
+
+      var params = "desc="+descricao+"&data_compra="+data_compra+"&data_validade="+data_validade+"&categoria="+categoria+"&id="+id_item+"&qtd="+quantidade+"&valor_unitario="+valor_uni+"&valor_compra="+valor_compra;
+      var xhttp = new XMLHttpRequest();
+      xhttp.open("POST", "/site/add_lote", true);
+      xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhttp.send(params);
+
+    }
+
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
   </script>

@@ -3,6 +3,7 @@ package service;
 import model.User;
 
 import java.sql.Date;
+import java.text.ParseException;
 
 import bd.userActions;
 import spark.Request;
@@ -28,6 +29,20 @@ public class UserService {
 		
 		return email;
 	}
-	
+	public Object addUser(Request request, Response response) throws ParseException { //pegar par�metros do lote por meio de uma requisi��o HTTP 
+		String nome = request.queryParams("nome");       
+		String email = request.queryParams("email");
+		String senha = request.queryParams("senha");
+		String empresa= request.queryParams("empresa");
+		String cnpj = request.queryParams("cnpj");
+		//pegar os par�metros que foram passados pelo formul�rio
+		con.connect(); //enviar requisi��o
+		if(con.insertUser(nome,email,senha,empresa,cnpj))
+			response.status(200);  //caso todos os par�metros forem devolvidos, houve sucesso (status de resposta 200)
+		else
+			response.status(404); //caso contr�rio, haver� erro cometido pelo usu�rio (404 not found)
+		
+		return 0;
+	}
 	
 }

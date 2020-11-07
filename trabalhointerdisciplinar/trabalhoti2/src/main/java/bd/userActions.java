@@ -3,6 +3,7 @@ package bd;
 import java.math.BigInteger;
 
 
+
 import java.sql.*;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -25,7 +26,7 @@ public class userActions {
 		System.out.println("oioi");
 		try {
 			Class.forName("org.postgresql.Driver");
-			conexao = DriverManager.getConnection("jdbc:postgresql://localhost:5432/controle_estoque","ti2cc", "root"); 
+			conexao = DriverManager.getConnection("jdbc:postgresql://localhost:5432/controle_estoque", "ti2cc", "root"); 
 			status = (conexao == null);
 			System.out.println("Conexao efetuada com o postgres!"); //conexão efetuada com sucesso 
 		} catch (ClassNotFoundException e) { 
@@ -37,17 +38,18 @@ public class userActions {
 		return status;
 	}
 	
-	public boolean insertUser(User usuario) {  //inserir um usuário no banco de dados 
+	public boolean insertUser(String nome,String email,String senha,String empresa,String cnpj) {  //inserir um usuário no banco de dados 
 		boolean status = false;
-		try {
-			Statement st = conexao.createStatement();  //objeto para realização de um comando SQL, podendo este ser UPDATE, INSERT ou DELETE
-			st.executeUpdate("INSERT INTO sacolao VALUES ("
-						   + usuario.getId() + ", '" + usuario.getNome() + "', '"+ usuario.getEmail() 
-					       + "', '" + usuario.getSenha() + "', '" + usuario.getEmpresa() + "', '" + usuario.getCnpj() + "');"); //inserir um usuário que se refere a um sacolao na tabela de usário com seus respectivos atributos: id, nome, senha, empresa
-			st.close(); 
+
+		try {  
+			Statement st = conexao.createStatement();  //criar objeto para realização de comandos SQL
+			String sql = "INSERT INTO sacolao VALUES (DEFAULT,'" + nome + "', '" + email + "', '" +senha + "','" +empresa + "', '" + cnpj + "');";  //String que possui o comando SQL para ser utilizada na função execute update o lote com seus respectivos atributos na tabela 
+			//System.out.println(sql);  
+			st.executeUpdate(sql);
+			st.close();
 			status = true;
-		} catch (SQLException u) {   //retornar erro caso não tenha adicionado o usuário com sucesso 
-			throw new RuntimeException(u);
+		} catch (SQLException u) {  
+			throw new RuntimeException(u);  //erro para caso o lote não seja adicionado à tabela 
 		}
 		return status;
 	}
@@ -88,7 +90,7 @@ public class userActions {
 
 		try {  
 			Statement st = conexao.createStatement();  //criar objeto para realização de comandos SQL
-			String sql = "INSERT INTO lote VALUES (DEFAULT,'" + data_compra + "', " + valor_compra + ", " + quantidade + "," + valor_unitario + ", '" + categoria + "', '" + desc + "' , '" + data_validade + "', " + id_item + ", '57853485000183');";  //String que possui o comando SQL para ser utilizada na função execute update o lote com seus respectivos atributos na tabela 
+			String sql = "INSERT INTO lote VALUES (DEFAULT,'" + data_compra + "', " + valor_compra + ", " + quantidade + "," + valor_unitario + ", '" + categoria + "', '" + desc + "' , '" + data_validade + "', " + id_item + ", '38415290000107');";  //String que possui o comando SQL para ser utilizada na função execute update o lote com seus respectivos atributos na tabela 
 			//System.out.println(sql);  
 			st.executeUpdate(sql);
 			st.close();
@@ -98,6 +100,22 @@ public class userActions {
 		}
 		return status;
 	}
+	
+	public boolean insertEmployee(String nome,String cargo, double salario) {  //inserir um usuário no banco de dados 
+		boolean status = false;
+		
 
+		try {  
+			Statement st = conexao.createStatement();  //criar objeto para realização de comandos SQL
+			String sql = "INSERT INTO funcionario VALUES (DEFAULT," + salario + ", '" + cargo + "', '" + nome+ "');";  //String que possui o comando SQL para ser utilizada na função execute update o lote com seus respectivos atributos na tabela 
+			//System.out.println(sql);  
+			st.executeUpdate(sql);
+			st.close();
+			status = true;
+		} catch (SQLException u) {  
+			throw new RuntimeException(u);  //erro para caso o lote não seja adicionado à tabela 
+		}
+		return status;
+	}
 	
 }
