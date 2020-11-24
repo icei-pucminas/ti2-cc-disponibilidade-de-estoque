@@ -1,0 +1,103 @@
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    display: grid;
+}
+
+.redes_sociais {
+    flex: 1 1 300px;
+    height: 25px;
+    background-color: #7EE19E;
+    text-align: center;
+    padding-left: 0;
+    margin: 0;
+}
+
+.redes_sociais > li {
+    display: inline-block;
+    font-style: italic;
+    text-align: center;
+    display: -moz-inline-box;
+    zoom: 1;
+    width: 30%;
+}
+
+.home_navbar {
+    display: grid;
+    background-color: #ffffff;
+    grid-template-columns: 50% 50%;
+    place-items: center;
+    padding: 10px;
+    height: 100px;
+    z-index: 1;
+}
+
+.home_navbar .logo {
+    width: auto;
+    height: 80px;
+}
+
+.cadastrar_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 500px;
+    font-weight: bold;
+    position: relative;
+    place-items: center;
+    padding: 10px 30px;
+}
+
+main .bg {
+    background: url("../img/super-market-background.jpg");;
+    background-size: cover; /* Resize the background image to cover the entire container */
+    box-shadow:inset 0 0 0 2000px #6a62739c;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .9;
+}
+
+.cadastrar_container .texto {
+    flex: 0 1 70ch;
+    text-align: center;
+    font-size: 3vh;
+    color: #ffffff;
+    max-width: 70ch;
+}
+.cadastrar_container .texto > strong {
+    color:#7EE19E;
+}
+
+.cadastrar_container > button {
+    flex: 0 1 200px;
+    margin: 40px;
+}
+
+.detalhes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle, #7EFFE3  0%, #7CABA6 0%, #7EE19E 100%);
+}
+
+.como_funciona {
+    flex: 1 1 300px;
+    padding: 20px;
+}
+
+.como_funciona .texto {
+}
+
+.sobre {
+    flex: 1 1 300px;
+    padding: 20px 10px;
+    /*background-color: #7EEFE3;*/
+}
