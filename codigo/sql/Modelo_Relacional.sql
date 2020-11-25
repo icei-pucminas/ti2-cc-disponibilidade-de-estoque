@@ -1,7 +1,7 @@
 ----------------------------
 -- Table Sacolao
 -- -----------------------------------------------------
-CREATE TABLE Sacolao (
+CREATE TABLE if not exists Sacolao (
   id SERIAL,
   nome VARCHAR(45) NULL,
   email VARCHAR(45) NULL,
@@ -15,7 +15,7 @@ CREATE TABLE Sacolao (
 -- -----------------------------------------------------
 -- Table NotaFiscal
 -- -----------------------------------------------------
-CREATE TABLE NotaFiscal (
+CREATE TABLE if not exists NotaFiscal (
   numeroNF SERIAL,
   data DATE NULL,
   valor REAL NULL,
@@ -32,7 +32,7 @@ CREATE TABLE NotaFiscal (
 -- -----------------------------------------------------
 -- Table Item_NF
 -- -----------------------------------------------------
-CREATE TABLE Item_NF (
+CREATE TABLE if not exists Item_NF (
   idItem SERIAL,
   descricao VARCHAR(45) NULL,
   quant_item INT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE Item_NF (
 -- -----------------------------------------------------
 -- Table Lote
 -- -----------------------------------------------------
-CREATE TABLE Lote (
+CREATE TABLE if not exists Lote (
   codigo SERIAL,
   data_Entrada DATE NULL,
   Valor REAL NULL,
@@ -71,7 +71,7 @@ CREATE TABLE Lote (
 -- -----------------------------------------------------
 -- Table Fornecedor
 -- -----------------------------------------------------
-CREATE TABLE Fornecedor (
+CREATE TABLE if not exists Fornecedor (
   codigo SERIAL,
   nome VARCHAR(45) NULL,
   endereco VARCHAR(45) NULL,
@@ -89,7 +89,7 @@ CREATE TABLE Fornecedor (
 -- -----------------------------------------------------
 -- Table Funcionario
 -- -----------------------------------------------------
-CREATE TABLE Funcionario (
+CREATE TABLE if not exists Funcionario (
   codigo SERIAL,
   salario REAL NULL,
   cargo VARCHAR(45) NULL,
@@ -101,7 +101,7 @@ CREATE TABLE Funcionario (
 -- -----------------------------------------------------
 -- Table Sacolao_has_Funcionario
 -- -----------------------------------------------------
-CREATE TABLE Sacolao_has_Funcionario (
+CREATE TABLE if not exists Sacolao_has_Funcionario (
   Sacolao_cnpj CHAR(14) NOT NULL,
   Funcionario_codigo INT NOT NULL,
   PRIMARY KEY (Sacolao_cnpj, Funcionario_codigo),
@@ -121,7 +121,7 @@ CREATE TABLE Sacolao_has_Funcionario (
 -- -----------------------------------------------------
 -- Table NotaFiscal_has_Item_NF
 -- -----------------------------------------------------
-CREATE TABLE NotaFiscal_has_Item_NF (
+CREATE TABLE if not exists NotaFiscal_has_Item_NF (
   NotaFiscal_numeroNF INT NOT NULL,
   Item_NF_idItem INT NOT NULL,
   PRIMARY KEY (NotaFiscal_numeroNF, Item_NF_idItem),

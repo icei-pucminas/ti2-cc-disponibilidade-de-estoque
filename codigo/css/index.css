@@ -101,3 +101,7 @@ main .bg {
     padding: 20px 10px;
     /*background-color: #7EEFE3;*/
 }
+
+footer {
+    height: 500px;
+}

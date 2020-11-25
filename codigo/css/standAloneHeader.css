@@ -21,10 +21,12 @@ header { /* grid para logo, botão do menu e barra colorida */
 .logo {
   height: auto;
   grid-area: a; /* dentro de header */
+  padding: 0;
+  margin: 0;
 }
 
 .logo .imagem_logo {
-  max-height: 30px; /* altura máxima do logo */
+  max-height: 70px; /* altura máxima do logo */
 }
 
 #menu { /* área do botão do menu */
@@ -33,7 +35,7 @@ header { /* grid para logo, botão do menu e barra colorida */
   margin-top: auto;
   margin-bottom: auto;
   background: rgb(63,160,255);
-  background: radial-gradient(circle, rgba(63,160,255,1) 0%, rgba(96,158,255,1) 0%, rgba(194,139,236,1) 100%);
+  background: radial-gradient(circle, #7caba6 0%, #7ee19e 0%, #7effe3 100%);
 }
 
 
@@ -49,7 +51,7 @@ header { /* grid para logo, botão do menu e barra colorida */
   top: 0; /* Stay at the top */
   right: 0; /* Stay at the right */
   background: rgb(63,160,255);
-  background: radial-gradient(circle, rgba(63,160,255,1) 0%, rgba(96,158,255,1) 0%, rgba(194,139,236,1) 100%);
+  background: radial-gradient(circle, #7caba6 0%, #7ee19e 0%, #7effe3 100%);
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.2s; /* 0.5 second transition effect to slide in the sidenav */
@@ -105,7 +107,7 @@ header { /* grid para logo, botão do menu e barra colorida */
   */
   text-align: center;  
   background: rgb(63,160,255);
-  background: radial-gradient(circle, rgba(63,160,255,1) 0%, rgba(96,158,255,1) 0%, rgba(194,139,236,1) 100%);
+  background: radial-gradient(circle, #7caba6 0%, #7ee19e 0%, #7effe3 100%);
   min-height: 50px;
   border-radius: 10px;
 }
@@ -153,5 +155,10 @@ header { /* grid para logo, botão do menu e barra colorida */
   }
   .cabecalho-desktop a{
     padding-bottom: 0;
+  }
+  .container_menu {
+    display: grid;
+    place-items: center;
+    justify-content: left;
   }
 }
