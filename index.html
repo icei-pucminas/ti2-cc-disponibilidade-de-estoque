@@ -57,9 +57,19 @@
       </div>
     </main>
 
-    <footer>
-      <iframe src="https://powerva.microsoft.com/webchat/bots/1e0d320b-67f2-46be-90f8-a1a5bb2dc827" frameborder="0" style="width: 100%; height: 100%;"></iframe>
-    </footer>
+    <script>
+      window.watsonAssistantChatOptions = {
+          integrationID: "7b9c77e8-bac7-4151-b81e-96e1bfe0cd52", // The ID of this integration.
+          region: "us-south", // The region your integration is hosted in.
+          serviceInstanceID: "cfe0379d-d232-409e-abcb-b87719a32546", // The ID of your service instance.
+          onLoad: function(instance) { instance.render(); }
+        };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+        document.head.appendChild(t);
+      });
+    </script>
 
 
 
