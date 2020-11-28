@@ -30,7 +30,7 @@ public class Host {
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             return new VelocityTemplateEngine().render(
-                new ModelAndView(model, "index.html")
+                new ModelAndView(model, "../../../../../index.html")
             );
         });
         
