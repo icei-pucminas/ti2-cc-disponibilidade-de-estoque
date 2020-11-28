@@ -10,37 +10,20 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="../css/headerCadastro.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src='../js/fakedb_login.js'></script>
+            <!-- scripts para carregar cabeçalho de "standAloneHeader.html" em "header"-->
+            <link rel="stylesheet" href="../css/standAloneHeader.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script> 
+                $(function(){
+                $("#standAloneHeader_V2").load("standAloneHeaderV2.html"); 
+                });
+            </script>
 </head>
 
 <body>
  
-    <!--Cabeçalho-->
-    <header>
-        <div class="container-flex">
-            <div class="container_menu">
-                <div class="row">
-                    <div class="col-3">
-                        <a href="../../index.html">
-                            <img src="../img/logo.png" alt="logo" class="logo">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12 info text-center lead">
-                    <i class="fas fa-address-card fa-lg bg-white"></i>
-                    <div class="d-inline-block font-weight-bold m-2 pl-1 pr-3 py-4 text-white h3" id="taxa">
-                        Cadastro
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+        <!--Cabeçalho-->
+        <header id="standAloneHeader_V2"></header>
     <main>
         <div class="container shadow rounded">
             <div class="row border-bottom" style="background-color: rgba(56, 118, 143, 0.267);">
@@ -343,9 +326,6 @@
 
 </script>
 	<!--<script src="../../js/user.js"></script>-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
