@@ -1,1 +1,1 @@
-<?php include_once('index.html'); ?>
+<?php include_once('codigo/src/main/resources/index.html'); ?>
