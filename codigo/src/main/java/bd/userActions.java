@@ -7,6 +7,7 @@ import java.math.BigInteger;
 
 
 
+
 import java.sql.*;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -20,7 +21,7 @@ import model.User;
 import model.Lote;
 import model.Funcionario;
 import model.Fornecedor;
-
+import model.Produto;
 public class userActions {
 	
 	private Connection conexao;   
@@ -108,11 +109,6 @@ public class userActions {
 			rs=st.executeQuery();
 			while(rs.next()) {
 				contador++;
-				//System.out.println(rs.getString("nome")); 
-				//System.out.println(rs.getString("empresa")); 
-				//System.out.println(rs.getString("email")); 
-				//System.out.println(rs.getString("cnpj")); 
-				//System.out.println(rs.getString("id")); 
 				Gson gson = new Gson();
 				User user = new User(Integer.parseInt(rs.getString("id")),rs.getString("nome"),rs.getString("email"),rs.getString("senha"),rs.getString("empresa"),rs.getString("cnpj"));
 				json += gson.toJson(user);
@@ -168,11 +164,6 @@ public class userActions {
 			rs=st.executeQuery();
 			while(rs.next()) {
 				contador++;
-				//System.out.println(rs.getString("nome")); 
-				//System.out.println(rs.getString("empresa")); 
-				//System.out.println(rs.getString("email")); 
-				//System.out.println(rs.getString("cnpj")); 
-				//System.out.println(rs.getString("id")); 
 				Gson gson = new Gson();
 				Lote lote = new Lote(Integer.parseInt(rs.getString("codigo")),rs.getString("data_entrada"),Double.parseDouble(rs.getString("valor")),Integer.parseInt(rs.getString("quant_estoque")),Double.parseDouble(rs.getString("preco_unitario")),rs.getString("categoria"),rs.getString("descricao"), rs.getString("data_validade") );
 				json += gson.toJson(lote);
@@ -196,6 +187,68 @@ public class userActions {
 		
 		
 	}
+ 	
+ 	
+
+ 	
+ 	public String findAllProduto(){
+		int contador = 0;
+		String json = "[";
+		String sql = " SELECT * FROM item_nf"; 
+		String qtd_registros = "SELECT COUNT(*) FROM item_nf";
+		PreparedStatement st= null;
+		ResultSet rs=null;
+		
+		
+		//Contar Registros
+		int count = 0;
+		PreparedStatement st_1= null;
+		ResultSet rs_1=null;
+		try {
+		st_1 = conexao.prepareStatement(qtd_registros);
+		rs_1 = st_1.executeQuery();
+		 while(rs_1.next()){
+			    count = rs_1.getInt("count");
+		 }
+		}
+		catch(SQLException u) {
+			throw new RuntimeException(u);
+		}
+			
+		try {  
+			 st = conexao.prepareStatement(sql);  //criar objeto para realização de comandos SQL
+			 //String que possui o comando SQL para ser utilizada na função execute update o lote com seus respectivos atributos na tabela 
+			//System.out.println(sql);  
+			rs=st.executeQuery();
+			while(rs.next()) {
+				contador++; 
+				Gson gson = new Gson();
+				Produto produto = new Produto(rs.getString("descricao"),Integer.parseInt(rs.getString("iditem")));
+				json += gson.toJson(produto);
+				if(contador==count)
+					json += "";
+					else
+				json += ",";
+               
+				
+			}
+			json += "]";
+			st.close();		
+			return json;
+			
+		   
+		} catch (SQLException u) {  
+			throw new RuntimeException(u);
+
+		}
+		
+		
+		
+	}
+ 	
+ 	
+ 	
+ 	
  	
  	public String findAllFuncionario(){
 		int contador = 0;
@@ -353,6 +406,42 @@ public class userActions {
 		return status;
 	}
 	
+	public boolean addProduto(String nome) throws ParseException { //adicionar um lote com seus respectivos atributos: descrição, data da compra, data de validade, categoria, id, quantidade de produtos no lote e valor unitário do produto
+		boolean status = false;
+		
+
+		try {  
+			Statement st = conexao.createStatement();  //criar objeto para realização de comandos SQL
+			String sql = "INSERT INTO item_nf VALUES (DEFAULT,'" + nome + "');";  //String que possui o comando SQL para ser utilizada na função execute update o lote com seus respectivos atributos na tabela 
+			System.out.println(sql);  
+			st.executeUpdate(sql);
+			st.close();
+			status = true;
+		} catch (SQLException u) {  
+			throw new RuntimeException(u);  //erro para caso o lote não seja adicionado à tabela 
+		}
+		return status;
+	}
+	
+	public boolean alterarProduto(int id, String nome) throws ParseException { //adicionar um lote com seus respectivos atributos: descrição, data da compra, data de validade, categoria, id, quantidade de produtos no lote e valor unitário do produto
+		boolean status = false;
+		
+
+		try {  
+			Statement st = conexao.createStatement();  //criar objeto para realização de comandos SQL
+			String sql = "UPDATE item_nf SET descricao='" + nome +"' WHERE iditem= "+ id + "";
+			System.out.println(sql);  
+			st.executeUpdate(sql);
+			st.close();
+			status = true;
+		} catch (SQLException u) {  
+			throw new RuntimeException(u);  //erro para caso o lote não seja adicionado à tabela 
+		}
+		return status;
+	}
+	
+	
+//--------------------------------------------------------------------------------------------------LOTE-----------------------------------------------------------------------------------------------------------------------------------------------	
 	public boolean alterarLote(int id, String nome) throws ParseException { //adicionar um lote com seus respectivos atributos: descrição, data da compra, data de validade, categoria, id, quantidade de produtos no lote e valor unitário do produto
 		boolean status = false;
 		
@@ -371,7 +460,7 @@ public class userActions {
 	}
 	
 	
-	
+//=======================================================================================ESTOQUE=================================================================================================================================================================	
 	public boolean alterarLoteEstoque(int id, int quantidade) throws ParseException { //adicionar um lote com seus respectivos atributos: descrição, data da compra, data de validade, categoria, id, quantidade de produtos no lote e valor unitário do produto
 		boolean status = false;
 		
@@ -635,6 +724,25 @@ public class userActions {
 		}
 		return status;
 	}
+	
+	public boolean deleteProduto(int id) throws ParseException { //adicionar um lote com seus respectivos atributos: descrição, data da compra, data de validade, categoria, id, quantidade de produtos no lote e valor unitário do produto
+		boolean status = false;
+		
+
+		try {  
+			Statement st = conexao.createStatement();  //criar objeto para realização de comandos SQL
+			String sql = "DELETE FROM item_nf WHERE iditem=" + id +"";
+			System.out.println(sql);  
+			st.executeUpdate(sql);
+			st.close();
+			status = true;
+		} catch (SQLException u) {  
+			throw new RuntimeException(u);  //erro para caso o lote não seja adicionado à tabela 
+		}
+		return status;
+	}
+	
+	
 	
 	public boolean deleteFuncionario(int id) throws ParseException { //adicionar um lote com seus respectivos atributos: descrição, data da compra, data de validade, categoria, id, quantidade de produtos no lote e valor unitário do produto
 		boolean status = false;

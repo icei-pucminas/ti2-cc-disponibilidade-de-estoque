@@ -40,7 +40,7 @@
     <div class="form-row">
       <!-- input descri√ß√£o -->
       <div class="col-12 col-sm-9 mb-3"> 
-        <label for="l_descricao"><strong>Descri√ß√£o</strong></label>
+        <label for="l_descricao"><strong>DescriÁ„o</strong></label>
         <input type="text" class="form-control" id="descricao">
       </div>
 
@@ -87,7 +87,7 @@
       </div>
 
       <div class="col-sm-3 mb-3">
-        <label for="l_valor"><strong>Valor unit√°rio</strong></label>
+        <label for="l_valor"><strong>Valor unit·rio</strong></label>
         <input type="number" class="form-control" id="valor_uni" value="0.00">
       </div>
 
@@ -100,26 +100,26 @@
       <button class="btn btn-primary" id="btnRegistrar" onclick="adicionarLote()" type="submit">Adicionar o Lote</button>
     </div>
     <br>
-    <div id="tabela">
-      <table class="table table-responsive table-striped">
-        <thead>
-          <tr>
-            <th scope="col">C√≥digo</th>
-            <th scope="col">Descri√ß√£o</th>
-            <th scope="col">Validade</th>
-            <th scope="col">Quantidade</th>
-            <th scope="col">Valor Un.</th>
-            <th scope="col">Categoria</th>
-            <th scope="col">Armaz√©m</th>
-            <th scope="col">Estante</th>
-            <th scope="col">Prateleira</th>
-            <th scope="col">Posi√ß√£o</th>
-          </tr>
-        </thead>
-        <tbody id="corpoTabela"></tbody>
-      </table>
 
-    </div>
+ 	<p>N„o sabe o id do produto que quer adicionar?</p>
+	    <div class="links">
+        <a class="nav-link" href="../html/produtoList.html">
+          <button type="button" class="btn btn-outline-success">
+           	Clique aqui para saber!
+          </button>
+        </a>
+      </div>
+ 	
+<p>Quer adicionar um produto inÈdito no estabelecimento?</p>
+	    <div class="links">
+        <a class="nav-link" href="../html/inclusaoProdutos.html">
+          <button type="button" class="btn btn-outline-success" >
+           	Clique aqui para adicion·-lo ‡ lista de produtos antes de incluir um lote dele!
+          </button>
+        </a>
+      </div>
+
+   
 
 
   </main>
@@ -140,7 +140,14 @@
       xhttp.open("POST", "/site/add_lote", true);
       xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       xhttp.send(params);
-
+	  xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+			if(this.status == 200)
+            alert("produto incluso com sucesso !");
+			else
+			alert("produto nao incluso!");
+       }
+	}
     }
 
   </script>

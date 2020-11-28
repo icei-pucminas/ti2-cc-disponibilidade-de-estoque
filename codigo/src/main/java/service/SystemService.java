@@ -36,6 +36,36 @@ public class SystemService {
 		return 0;
 	}
 	
+	public Object addProduto(Request request, Response response) throws ParseException { //pegar par�metros do lote por meio de uma requisi��o HTTP 
+		String desc = request.queryParams("nome");       
+		//pegar os par�metros que foram passados pelo formul�rio
+		con.connect(); //enviar requisi��o
+		if(con.addProduto(desc))
+			response.status(200);  //caso todos os par�metros forem devolvidos, houve sucesso (status de resposta 200)
+		else
+			response.status(404); //caso contr�rio, haver� erro cometido pelo usu�rio (404 not found)
+		
+		return 0;
+	}
+	
+	
+	
+	
+	public Object alterProduto(Request request, Response response) throws ParseException { //pegar par�metros do lote por meio de uma requisi��o HTTP 
+		String nome = request.queryParams("nome");       
+		int id_item = Integer.parseInt(request.queryParams("id"));
+		//pegar os par�metros que foram passados pelo formul�rio
+		con.connect(); //enviar requisi��o
+		if(con.alterarProduto(id_item,nome))
+			response.status(200);  //caso todos os par�metros forem devolvidos, houve sucesso (status de resposta 200)
+		else
+			response.status(404); //caso contr�rio, haver� erro cometido pelo usu�rio (404 not found)
+		
+		return 0;
+	}
+	
+	
+	
 	
 	public Object alterLote(Request request, Response response) throws ParseException { //pegar par�metros do lote por meio de uma requisi��o HTTP 
 		String nome = request.queryParams("nome");       
@@ -171,6 +201,18 @@ public class SystemService {
 		return 0;
 	}
 	
+	public Object deletarProduto(Request request, Response response) throws ParseException { //pegar par�metros do lote por meio de uma requisi��o HTTP ;       
+		int id_item = Integer.parseInt(request.queryParams("id"));
+		//pegar os par�metros que foram passados pelo formul�rio
+		con.connect(); //enviar requisi��o
+		if(con.deleteProduto(id_item))
+			response.status(200);  //caso todos os par�metros forem devolvidos, houve sucesso (status de resposta 200)
+		else
+			response.status(404); //caso contr�rio, haver� erro cometido pelo usu�rio (404 not found)
+		
+		return 0;
+	}
+	
 	
 	
 	
@@ -190,6 +232,21 @@ public class SystemService {
 	     con.connect(); //enviar requisi��o
 
 		 String answer = con.findAllLote();
+		 System.out.println(answer);
+		 if(answer != null) {
+			response.status(200);  //caso todos os par�metros forem devolvidos, houve sucesso (status de resposta 200)
+		 }else {
+			response.status(404);
+		 }//caso contr�rio, haver� erro cometido pelo usu�rio (404 not found)
+		
+		return answer;
+	}
+	public Object acharTodosProduto(Request request, Response response) throws ParseException { 
+		 response.header("Content-Type", "application/json");
+	     response.header("Content-Encoding", "UTF-8");
+	     con.connect(); //enviar requisi��o
+
+		 String answer = con.findAllProduto();
 		 System.out.println(answer);
 		 if(answer != null) {
 			response.status(200);  //caso todos os par�metros forem devolvidos, houve sucesso (status de resposta 200)
