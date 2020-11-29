@@ -29,7 +29,7 @@ public class Host {
 	public static void main(String[] arg){
 		
 		System.out.println("Executando Host.java");
-		staticFiles.location("/");
+		staticFiles.location("/public");
         
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
