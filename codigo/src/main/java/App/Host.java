@@ -27,9 +27,9 @@ public class Host {
 	
 	
 	public static void main(String[] arg){
-		port(port = process.env.PORT || 80);
+		port(HerokuPort());
 		
-		System.out.println("Executando Host.java");
+		//System.out.println("Executando Host.java");
 		staticFiles.location("/public");
         
         get("/", (request, response) -> {
@@ -79,4 +79,12 @@ public class Host {
         get("/fornecedor/find_all_fornecedores", (request, response) -> fornecedorService.acharTodosFornecedor(request, response));
         get("/produto/find_all_produto", (request, response) -> systemService.acharTodosProduto(request, response));
 	}
+}
+
+private static int HerokuPort() {
+    ProcessBuilder port = new ProcessBuilder();
+    if (port.environment().get("PORT") != null) {
+        return Integer.parseInt(port.environment().get("PORT"));
+    }
+    return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
 }
