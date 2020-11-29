@@ -30,7 +30,7 @@ public class Host {
 		port(HerokuPort());
 		
 		//System.out.println("Executando Host.java");
-		staticFiles.location("/public");
+		staticFiles.location("/");
         
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
