@@ -69,7 +69,7 @@ public class Host {
         post("/produto/add_produto", (request, response) -> systemService.addProduto(request, response)); 
         post("/site/add_lote", (request, response) -> systemService.addLote(request, response));   
         post("/fornecedor/add_fornecedor", (request, response) -> fornecedorService.addFornecedor(request, response));    
-        post("/usuarios/add_user",(request, response) -> userService.addUser(request, response));
+        post("https://disp-estoque.herokuapp.com/usuarios/add_user",(request, response) -> userService.addUser(request, response));
         post("/funcionario/add_funcionario",(request, response) -> funcionarioService.addFuncionario(request, response));
         
         get("/usuarios/find_all", (request, response) -> userService.acharTodos(request, response)); 
