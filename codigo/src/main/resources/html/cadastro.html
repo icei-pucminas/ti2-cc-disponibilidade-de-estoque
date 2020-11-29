@@ -85,13 +85,13 @@
     if (this.readyState == 4) {
       if(this.status == 200){
       alert("Usuario inserido com sucesso !");
-       window.location.href = "http://localhost:4567/login.html";
+        window.location.href = "login.html";
       }
       else{
       alert("Usuario nao inserido!");
       }
      }};
-    xhttp.open("POST", "/usuarios/add_user", true);
+    xhttp.open("POST", "https://disp-estoque.herokuapp.com/usuarios/add_user", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhttp.send(params);
 
