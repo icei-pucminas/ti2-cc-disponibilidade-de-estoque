@@ -36,7 +36,10 @@ public class userActions {
 		System.out.println("oioi");
 		try {
 			Class.forName("org.postgresql.Driver");
-			conexao = DriverManager.getConnection("jdbc:postgresql://localhost:5432/controle_estoque", "ti2cc", "root"); 
+			//url=jdbc:postgresql://$AZ_DATABASE_NAME.postgres.database.azure.com:5432/demo?ssl=true&sslmode=require
+			//user=demo@$AZ_DATABASE_NAME
+				//	password=$AZ_POSTGRESQL_PASSWORD
+			conexao = DriverManager.getConnection("jdbc:postgresql://ti2cc-disponibilidade-de-estoque.postgres.database.azure.com:5432/controle_estoque?ssl=true&sslmode=require", "ti2cc@ti2cc-disponibilidade-de-estoque", "root@ti2"); 
 			status = (conexao == null);
 			System.out.println("Conexao efetuada com o postgres!"); //conexão efetuada com sucesso 
 		} catch (ClassNotFoundException e) { 
@@ -395,7 +398,7 @@ public class userActions {
 
 		try {  
 			Statement st = conexao.createStatement();  //criar objeto para realização de comandos SQL
-			String sql = "INSERT INTO lote VALUES (DEFAULT,'" + data_compra + "', " + valor_compra + ", " + quantidade + "," + valor_unitario + ", '" + categoria + "', '" + desc + "' , '" + data_validade + "', " + id_item + ", '38415290000107');";  //String que possui o comando SQL para ser utilizada na função execute update o lote com seus respectivos atributos na tabela 
+			String sql = "INSERT INTO lote VALUES (DEFAULT,'" + data_compra + "', " + valor_compra + ", " + quantidade + "," + valor_unitario + ", '" + categoria + "', '" + desc + "' , '" + data_validade + "', " + id_item + ", '12365478962340');";  //String que possui o comando SQL para ser utilizada na função execute update o lote com seus respectivos atributos na tabela 
 			//System.out.println(sql);  
 			st.executeUpdate(sql);
 			st.close();

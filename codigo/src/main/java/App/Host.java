@@ -2,6 +2,10 @@ package App;
 
 import static spark.Spark.*;
 
+
+
+
+
 import java.util.*;
 import bd.userActions;
 import model.User;
@@ -25,12 +29,12 @@ public class Host {
 	public static void main(String[] arg){
 		
 		
-		staticFiles.location("https://disp-estoque.herokuapp.com/");
+		staticFiles.location("/");
         
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             return new VelocityTemplateEngine().render(
-                new ModelAndView(model, "../../../../../index.html")
+                new ModelAndView(model, "index.html")
             );
         });
         
