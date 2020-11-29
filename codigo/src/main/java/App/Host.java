@@ -28,8 +28,8 @@ public class Host {
 	
 	public static void main(String[] arg){
 		
-		
-		staticFiles.location("/public");
+		System.out.println("Executando Host.java");
+		staticFiles.location("/");
         
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
