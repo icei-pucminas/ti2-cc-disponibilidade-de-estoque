@@ -27,6 +27,7 @@ public class Host {
 	
 	
 	public static void main(String[] arg){
+		port(port = process.env.PORT || 80);
 		
 		System.out.println("Executando Host.java");
 		staticFiles.location("/public");
