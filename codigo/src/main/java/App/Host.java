@@ -25,7 +25,7 @@ public class Host {
 	public static void main(String[] arg){
 		
 		
-		staticFiles.location("/");
+		staticFiles.location("https://disp-estoque.herokuapp.com/");
         
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
