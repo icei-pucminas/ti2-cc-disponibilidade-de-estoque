@@ -86,5 +86,5 @@ private static int HerokuPort() {
     if (port.environment().get("PORT") != null) {
         return Integer.parseInt(port.environment().get("PORT"));
     }
-    return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
+    return 80; //return default port if heroku-port isn't set (i.e. on localhost)
 }
