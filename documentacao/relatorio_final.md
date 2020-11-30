@@ -390,7 +390,7 @@ A página é composta por um cabeçalho com informações de contato, uma barra 
 
 No presente momento, apenas o link “*Entrar”* encontra-se disponível.
 
-![tela inicial](imagens/09telainicial.jpg "tela inicial")
+![tela inicial](imagens/telainicial.png "tela inicial")
 
 Figura 3 - Tela Inicial
 
@@ -400,7 +400,7 @@ Figura 3 - Tela Inicial
 
 A tela de login (figura 4), exige inserção de campo de e-mail e senha para acesso ao sistema. Caso o usuário não seja cadastrado, deverá clicar em “*faça o cadastro agora”*.
 
-![tela de login](imagens/10login.jpg "tela de login")
+![tela de login](imagens/login.png "tela de login")
 
 Figura 4 - Tela de Login
 
@@ -412,7 +412,7 @@ Caso seja um novo usuário, deverá obrigatoriamente passar pela tela de cadastr
 
 Após isso, você será levado de volta para a tela de Login (figura 4) para confirmação de seu login.
 
-![tela de cadastro de usuario](imagens/11cadastro.jpg "tela de cadastro de usuario")
+![tela de cadastro de usuario](imagens/cadastro.png "tela de cadastro de usuario")
 
 Figura 5 - Cadastro de Usuário
 
@@ -422,15 +422,15 @@ Figura 5 - Cadastro de Usuário
 
 A tela de acesso rápido é composta pelo logo do sistema(que ao clicar leva para esta tela), um menu de navegação rápida, uma área de exibição dos dados do usuário logado, e uma home com funcionalidades para acesso rápido e relevante de informações. Na Navbar, marcada pelo marcador roxo na imagem abaixo, apenas o *dropdown* Produtos e as Opções estão com funcionalidades, onde está marcado com a cor verde.
 
-![tela de acesso rapido](imagens/12acessorapido.jpg "tela de cadastro de acesso rapido")
+![tela de acesso rapido](imagens/acessorapido.png "tela de cadastro de acesso rapido")
 
 Figura 6.1 - Acesso Rápido
 
-![tela navbar produtos](imagens/13navbarprodutos.jpg "[tela navbar produtos")
+![tela navbar produtos](imagens/navbar1.png "[tela navbar produtos")
 
 Figura 6.2 - Navbar Produtos
 
-![tela navbar opcoes](imagens/14navbaropcoes.jpg "[tela navbar opcoes")
+![tela navbar opcoes](imagens/navbar2.png "[tela navbar opcoes")
 
 Figura 6.3 - Navbar Opções
 
@@ -444,7 +444,7 @@ Já o que está rodeado pelo marcador vermelho, é uma estrutura vazia de intera
 
 Nesta tela, será solicitado ao operador do sistema que insira a descrição, código, categoria, quantidade, valor de aquisição do material adquirido e localização a ser armazenado. Poderão ser modificados ou adicionados novos campos futuramente de acordo com as necessidades de cada empresa. Ao clicar em “*adicionar ao estoque”* o material será cadastrado localmente no dispositivo, em formato JSON, por meio do *localStorage*.
 
-![tela cadastro materiais](imagens/15cadastromateriais.jpg "tela cadastro materias")
+![tela cadastro materiais](imagens/cadastromateriais.png "tela cadastro materias")
 
 Figura 7 - Cadastro de Materiais
 
@@ -482,7 +482,7 @@ Figura 11 - Tela de Vendas
 
 Nessa funcionalidade, está implementado a seção de Compras. Essa função foi idealizada para que o cliente possa cadastrar compras feitas com distribuidores, que devem ser cadastrados em uma tela que ainda há de ser construída. Por enquanto, é possível cadastrar e excluir uma compra cadastrada. A opção de concluir compra ainda está em desenvolvimento já que ela envolve muitas outras partes e funcionalidades do sistema. Espera-se na próxima entrega estar com ela em mão.
 
-![tela cpmpras](imagens/20compra.jpg "tela compras")
+![tela cpmpras](imagens/compra.png "tela compras")
 
 Figura 12 - Tela de Compras
 
