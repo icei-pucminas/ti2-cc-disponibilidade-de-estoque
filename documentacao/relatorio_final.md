@@ -420,7 +420,7 @@ Figura 5 - Cadastro de Usuário
 4.1.7 Tela - Acesso Rápido
 ```
 
-A tela de acesso rápido é composta pelo logo do sistema(que ao clicar leva para esta tela), um menu de navegação rápida, uma área de exibição dos dados do usuário logado, e uma home com funcionalidades para acesso rápido e relevante de informações. Na Navbar, marcada pelo marcador roxo na imagem abaixo, apenas o *dropdown* Produtos e as Opções estão com funcionalidades, onde está marcado com a cor verde.
+A tela de acesso rápido é composta pelo logo do sistema(que ao clicar leva para esta tela), um menu de navegação rápida, uma área de exibição dos dados do usuário logado, e uma home com funcionalidades para acesso rápido e relevante de informações. Na Navbar, apenas o *dropdown* Produtos e as Opções estão com funcionalidades.
 
 ![tela de acesso rapido](imagens/acessorapido.png "tela de cadastro de acesso rapido")
 
@@ -434,15 +434,12 @@ Figura 6.2 - Navbar Produtos
 
 Figura 6.3 - Navbar Opções
 
-Na figura 6.1, pode se visualizar três partes, mas que no final, são duas separadas. Em amarelo, se encontra as abas de acesso Rápido e Relevante (RapRel) que tem como objetivo proporcionar opções de funcionalidades que vão direto ao ponto e facilitem o acesso rápido de informações. Nessa entrega, apenas a aba “Produtos” está totalmente funcional, funcionando como acesso rápido aos produtos cadastrados e suas informações mais importantes, assim como uma pesquisa rápida por um produto específico, seja por código ou por descrição do mesmo.
-
-Já o que está rodeado pelo marcador vermelho, é uma estrutura vazia de interatividade JavaScript, mas que está pronta para a implementação de um sistema que permita dar ao usuário informações relevantes sobre sua situação financeira no mês atual, como foi no mês passado, e como seria o crescimento ideal para o próximo mês. Essas funcionalidades serão implementadas junto com as funcionalidades sobre financeiro e relatórios. Abaixo dessas informações, se encontra uma tabela que será utilizada para projetar outros dados que sejam de interesse financeiro para o usuário.
 
 ```
 4.1.8 Tela - Cadastro de Materiais
 ```
 
-Nesta tela, será solicitado ao operador do sistema que insira a descrição, código, categoria, quantidade, valor de aquisição do material adquirido e localização a ser armazenado. Poderão ser modificados ou adicionados novos campos futuramente de acordo com as necessidades de cada empresa. Ao clicar em “*adicionar ao estoque”* o material será cadastrado localmente no dispositivo, em formato JSON, por meio do *localStorage*.
+Nesta tela, será solicitado ao operador do sistema que insira a descrição, código, categoria, quantidade, valor de aquisição do material adquirido e localização a ser armazenado. Poderão ser modificados ou adicionados novos campos futuramente de acordo com as necessidades de cada empresa.
 
 ![tela cadastro materiais](imagens/cadastromateriais.png "tela cadastro materias")
 
@@ -452,19 +449,12 @@ Figura 7 - Cadastro de Materiais
 4.1.9 Tela - Consulta de Estoque
 ```
 
-Nesta tela (figura 8), o operador deverá inserir os parâmetros de pesquisa e clicar em “*Consultar no Estoque”*. Será apresentado o resultado da pesquisa logo abaixo. O usuário poderá clicar em “*+ detalhes”* para exibir a tela contida na figura 9. Planeja-se implementar uma função onde poderá adicionar o item à “lista de reabastecimento” por meio desta tela.
+Nesta tela (figura 8), o operador deverá inserir os parâmetros de pesquisa e clicar em “*Consultar no Estoque”*. Será apresentado o resultado da pesquisa logo abaixo.
 
-![tela consulta estoque](imagens/16consultaestoque.jpg "tela consulta estoque")
+![tela consulta estoque](imagens/consulta.jpg "tela consulta estoque")
 
 Figura 8 - Consulta de Estoque
 
-![tela cdetalhes produto](imagens/17detalhesproduto.jpg "tela detalhes produto")
-
-Figura 9 - Detalhes do Produto
-
-![tela consulta ao estoque](imagens/18percentual.jpg "tela consulta ao estoque")
-
-Figura 10 - consulta ao percentual de estoque disponível
 
 ```
 4.1.10 Tela - Vendas
@@ -472,7 +462,7 @@ Figura 10 - consulta ao percentual de estoque disponível
 
 Nesta tela (figura 11), o operador deverá inserir os parâmetros de pesquisa com base na descrição do produto na parte mais abaixo da tela. Os resultados serão exibidos logo abaixo e o usuário deverá clicar na linha do produto que deseja vender. Ao fazê-lo, a caixa com as descrições do material será preenchida com as informações e, a seguir, o usuário deverá informar a quantidade de itens que deseja vender e clicar no botão verde para confirmar a venda.
 
-![tela vendas](imagens/19venda.jpg "tela vendas")
+![tela vendas](imagens/vendas.png "tela vendas")
 
 Figura 11 - Tela de Vendas
 
@@ -480,15 +470,13 @@ Figura 11 - Tela de Vendas
 4.1.11 Tela - Compra
 ```
 
-Nessa funcionalidade, está implementado a seção de Compras. Essa função foi idealizada para que o cliente possa cadastrar compras feitas com distribuidores, que devem ser cadastrados em uma tela que ainda há de ser construída. Por enquanto, é possível cadastrar e excluir uma compra cadastrada. A opção de concluir compra ainda está em desenvolvimento já que ela envolve muitas outras partes e funcionalidades do sistema. Espera-se na próxima entrega estar com ela em mão.
+Nessa funcionalidade, está implementado a seção de Compras, essa função foi idealizada para que o cliente possa cadastrar compras feitas com distribuidores.
 
 ![tela cpmpras](imagens/compra.png "tela compras")
 
 Figura 12 - Tela de Compras
 
-![tela cpmpras](imagens/21listadeaguardo.jpg "tela compras")
 
-Figura 13 - Tela de Compras - Lista de aguardo
 
 **5. Gerenciamento do Projeto**
 
