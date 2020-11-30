@@ -311,7 +311,7 @@ Para a aplicação e armazenamento do banco de dados, que foi projetado de acord
 > Exemplo da interface do phpgAdmin para admninistrar o banco de dados
 
 
-Nessa plataforma, foi criado o banco de dados "controle de estoque" com suas respectivas tabelas, linhas e colunas. Para fazermos a conexão do banco de dados com o site, foi utilizado o backend feito em Java e o Apache Spark aplicado em projeto Maven no Eclipse, que possui ferramentas para trabalhar com base de dados e SQL, para fazer as rotas de conexão. Assim, o usuário do site digita  as informações que deseja cadastrar ou verificar nos formulário, e, por meio das requisições HTTP e queries , conseguimos  anexar os dados passados no nosso banco. O código está disponível na pasta "ti2cc/trabalhointerdisciplinar". 
+Nessa plataforma, foi criado o banco de dados "controle de estoque" com suas respectivas tabelas, linhas e colunas. Para fazermos a conexão do banco de dados com o site, foi utilizado o backend feito em Java e o Apache Spark aplicado em projeto Maven no Eclipse, que possui ferramentas para trabalhar com base de dados e SQL, para fazer as rotas de conexão. Assim, o usuário do site digita  as informações que deseja cadastrar ou verificar nos formulário, e, por meio das requisições HTTP e queries , conseguimos  anexar os dados passados no nosso banco. O código está disponível na pasta "código". 
 
 ![Conexões](imagens/conexoes.png "Conexões")
 
@@ -327,7 +327,26 @@ A seguir, há o exemplo do cadastro de um lote de produtos, no caso, de morangos
 ![Cadastro de produtos no banco de dados](imagens/morango_adc.jpeg "Cadastro de lote de morangos no banco de dados")
 
 >Cadastro de um lote de morangos no banco de dados
+```
+3.5.3 Aplicação prática dos modelos- Banco de dados na nuvem 
+```
+Após o grupo obter sucesso com os testes e conexão com o Postgresql hospedado em localhost nas operações de inserção, remoção, atualização e listagem,  com visualização por meio do PhpgAdmin, foi aberta a discussão de que seria mais conveniente hospedar o banco de dados em nuvem, visto que tal ação daria acesso à vários usuários e desenvolveres a um só servidor, sem a necessidade de cada pessoa ter que configurar seu próprio banco de dados em sua máquina para fazer testes e ter acesso aos dados. Com isso, a plataforma de armazenamento do SGBD tornou-se um servidor oferecido pela Microsoft Azure, e o novo administrador de banco de dados tornou-se o PgAdmin, que faz conexão com servidores desse tipo e SGBDs armazenados em nuvem.
 
+![banco de dados em nuvem- Azure+PgAdmin](imagens/bdnuvem.png "PostgreSQL em nuvem")
+>Banco de dados em nuvem- Azure+PgAdmin
+
+Dessa forma, houve uma mudança da conexão com o banco de dados no código, e as rotas continuaram as mesmas, visto que as tabelas, linhas e colunas são as mesmas do banco de dados em localhost. Nesse contexto, o usário, por meio de requisições HTTP, consegue fazer mudanças no banco de dados. A seguir, temos um exemplo de cadastro de um funcionário feito por meio do envio de uma requisição HTTP resultante do formulário com os seus dados, que irá gerar uma rota que por meio dos códigos em Java, irá executar os comandos e querys em SQL necessárias para adicionar as informações no banco de dados. Tal código está disponível na pasta "código" desse repositório.
+
+![informações do cadastro de um novo funcionário](imagens/cadastro-final.png "Cadastro de um funcionário")
+>Informações do cadastro de um novo funcionário
+
+![mensagem-cadastro de funcionário ocorrido com sucesso](imagens/mensagem-sucesso.png "Cadastro de um funcionário- mensgaem de secesso na operação")
+>Mensagem-cadastro de funcionário ocorrido com sucesso
+
+![funcionário cadastrado no Postgresql](imagens/resultado-cadastro-funcionario.png "Cadastro realizado com sucesso")
+>Funcionário cadastrado no Postgresql
+
+Além disso, a conexão com o banco de dados em nuvem permitiu a hospedagem do site também em nuvem por meio do heroku app e o funcionamento correto da conexão entre o site e o SGBD. Portanto, o site está hospedado em [Heroku-site](https://controle-estoque-ti-dois.herokuapp.com/), e nele, os usuários cadastrados podem modificar o banco de dados de sua empresa, assim como todos os desenvoolvedores podem ter acesso ao Postgresql, evitando divergências, erros e economizando tempo e memória computacional que gastariam ao fazer o seu próprio banco de dados em localhost. 
 
 
 **4. Sistema desenvolvido**
