@@ -79,12 +79,12 @@ public class Host {
         get("/fornecedor/find_all_fornecedores", (request, response) -> fornecedorService.acharTodosFornecedor(request, response));
         get("/produto/find_all_produto", (request, response) -> systemService.acharTodosProduto(request, response));
 	}
+	private static int HerokuPort() {
+	    ProcessBuilder port = new ProcessBuilder();
+	    if (port.environment().get("PORT") != null) {
+	        return Integer.parseInt(port.environment().get("PORT"));
+	    }
+	    return 80; //return default port if heroku-port isn't set (i.e. on localhost)
+	}
 }
 
-private static int HerokuPort() {
-    ProcessBuilder port = new ProcessBuilder();
-    if (port.environment().get("PORT") != null) {
-        return Integer.parseInt(port.environment().get("PORT"));
-    }
-    return 80; //return default port if heroku-port isn't set (i.e. on localhost)
-}

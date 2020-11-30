@@ -45,6 +45,7 @@ public class UserService {
 		return 0;
 	}
 	public Object acharTodos(Request request, Response response) throws ParseException { 
+		 response.header("Acess-Control-Allow-Origin", "*");
 		 response.header("Content-Type", "application/json");
  	     response.header("Content-Encoding", "UTF-8");
  	     con.connect(); //enviar requisi��o
