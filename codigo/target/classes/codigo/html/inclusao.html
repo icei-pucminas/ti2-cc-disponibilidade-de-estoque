@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Incluir Material</title>
+
+  <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/inclusao.css">
+  
+  <!-- scripts para carregar cabe√ßalho de "standAloneHeader.html" em "header"-->
+    <link rel="stylesheet" href="../css/standAloneHeader.css">
+    <!-- substituir o jQuery do bootstrap por esse -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script> 
+      $(function(){
+        $("#standAloneHeader_V2").load("standAloneHeaderV2.html"); 
+      });
+    </script>
+</head>
+
+
+<body>
+
+  <!--Cabe√ßalho-->
+  <header id="standAloneHeader_V2"></header>
+
+
+  <main>
+
+    <div class="titulo">
+      <h3>INCLUS√O DE UM LOTE</h3>
+    </div>
+    <div class="form-row">
+      <!-- input descri√ß√£o -->
+      <div class="col-12 col-sm-9 mb-3"> 
+        <label for="l_descricao"><strong>DescriÁ„o</strong></label>
+        <input type="text" class="form-control" id="descricao">
+      </div>
+
+      <div class="col-12 col-sm-3 mb-3"> 
+        <label for="l_data_validade"><strong>Data da Compra</strong></label>
+        <input type="date" class="form-control" id="compra">
+      </div>
+
+    </div>
+
+
+    <div class="form-row"> <!-- nova linha -->
+
+      <div class="col-12 col-sm-3 mb-3"> 
+        <label for="l_data_validade"><strong>Data de Validade</strong></label>
+        <input type="date" class="form-control" id="validade">
+      </div>
+
+      <div class="col-sm-3 mb-3"> 
+        <label for="l_codigo"><strong>ID_Item</strong></label>
+        <input type="text" class="form-control" id="codigo" value="1 Maca, 2 Banana">
+      </div>
+
+      <div class="col-sm-3 mb-3">
+        <label for="l_categoria"><strong>Categoria</strong></label>
+        <select class="custom-select" id="categoria">
+          <option selected disabled value="">Categoria...</option>
+          <option>Alimentos</option>
+          <option>Vestu√°rio</option>
+          <option>Limpeza</option>
+          <option>...</option>
+        </select>
+      </div>
+
+
+      <div class="col-sm-3 mb-3">
+        <label for="l_quantidade"><strong>Quantidade</strong></label>
+        <input type="number" class="form-control" id="quantidade" value="0">
+      </div>
+
+      <div class="col-sm-3 mb-3">
+        <label for="l_valor"><strong>Valor da Compra</strong></label>
+        <input type="number" class="form-control" id="valor_compra" value="0.00">
+      </div>
+
+      <div class="col-sm-3 mb-3">
+        <label for="l_valor"><strong>Valor unit√°rio</strong></label>
+        <input type="number" class="form-control" id="valor_uni" value="0.00">
+      </div>
+
+    </div>
+
+
+    </div>
+
+    <div class="col-12 botao_adicionar">
+      <button class="btn btn-primary" id="btnRegistrar" onclick="adicionarLote()" type="submit">Adicionar o Lote</button>
+    </div>
+    <br>
+       <br>
+
+ 	<p>N„o sabe o id do produto que quer adicionar?</p>
+	    <div class="links">
+        <a class="nav-link" href="../html/produtoList.html">
+          <button type="button" class="btn btn-outline-success">
+           	Clique aqui para saber!
+          </button>
+        </a>
+      </div>
+ 	
+<p>Quer adicionar um produto novo no estabelecimento?</p>
+	    <div class="links">
+        <a class="nav-link" href="../html/inclusaoProdutos.html">
+          <button type="button" class="btn btn-outline-success" >
+           	Clique aqui para adiciona-lo a lista de produtos antes de incluir um lote dele!
+          </button>
+        </a>
+      </div>
+
+
+  </main>
+
+  <script>
+    function adicionarLote(){
+      let descricao = document.getElementById("descricao").value;
+      let data_compra = document.getElementById("compra").value;
+      let data_validade = document.getElementById("validade").value;
+      let id_item = document.getElementById("codigo").value;
+      let categoria = document.getElementById("categoria").value;
+      let quantidade = document.getElementById("quantidade").value;
+      let valor_compra = document.getElementById("valor_compra").value;
+      let valor_uni = document.getElementById("valor_uni").value;
+
+      var params = "desc="+descricao+"&data_compra="+data_compra+"&data_validade="+data_validade+"&categoria="+categoria+"&id="+id_item+"&qtd="+quantidade+"&valor_unitario="+valor_uni+"&valor_compra="+valor_compra;
+      var xhttp = new XMLHttpRequest();
+      xhttp.open("POST", "/site/add_lote", true);
+      xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhttp.send(params);
+
+    }
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a3121dc2ca.js" crossorigin="anonymous"></script>
+  
+  <script src="../../js/inclusao.js"></script>
+
+
+</body>
+
+
+
+</html>
