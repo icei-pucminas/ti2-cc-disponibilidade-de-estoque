@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>Alterar fornecedor</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- scripts para carregar cabeÃ§alho de "standAloneHeader.html" em "header"-->
+    <link rel="stylesheet" href="../css/standAloneHeader.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script> 
+        $(function(){
+        $("#standAloneHeader_V2").load("standAloneHeaderV2.html"); 
+        });
+    </script>
+    <header id="standAloneHeader_V2"></header>
+</head>
+
+<body>
+ 
+    <!--CabeÃ§alho-->
+    <header id="standAloneHeader_V2"></header>
+
+    <main>
+        <div class="container shadow rounded">
+            <div class="row border-bottom" style="background-color: rgba(56, 118, 143, 0.267);">
+                <div class="col-12 text-justify-left">
+                        <div class="row border-bottom rounded-pill shadow-sm mt-3 mb-2 mx-2 px-5">
+                            <div class="col-12 p-3 display-4 lead">
+                                Alterar fornecedor
+                            </div>
+                            <div class="col-6 p-3">
+                                <label for="id" class="lead font-weight-bold">id/código atual</label>
+                                <input type="text" class="form-control" placeholder="Ex.: 5" id="id">
+                            </div>
+
+
+<!--========================================================================NOVO ID=================================================================================================-->
+		<!--					             <div class="col-6 p-3">
+                                <label for="id" class="lead font-weight-bold">Novo id</label>
+                                <input type="text" class="form-control" placeholder="35" id="id">
+                            </div>                  
+                            
+                     
+                            <div class="col-12 text-center p-3">
+                                 <button class="btn btn-primary" id="registrar" onclick="alterarId()" type="submit">Cadastrar novo id</button>
+                            </div>
+                    -->
+
+<!--====================================================================NOME NOVO======================================================================================================-->
+                            <div class="col-12 p-3">
+                                <label for="nome" class="lead font-weight-bold">Novo nome</label>
+                                <input type="text" class="form-control" placeholder="uvas" id="nome">
+                            </div>                  
+                            
+                        
+                        
+                            <div class="col-12 text-center p-3">
+                                 <button class="btn btn-primary" id="registrar" onclick="alterarNome()" type="submit">Cadastrar novo nome</button>
+                            </div>
+                      
+						
+<!--==========================================================================================ENDEREÇO ==========================================================================================-->						
+						     <div class="col-12 p-3">
+                                <label for="endereco" class="lead font-weight-bold">Novo endereço</label>
+                                <input type="text" class="form-control" placeholder="Rua das Ostrar, 750, Goiás, Brasil" id="endereco">
+                            </div>                    
+                            
+                        
+                        
+                            <div class="col-12 text-center p-3">
+                                 <button class="btn btn-primary" id="registrar" onclick="alterarEndereco()" type="submit">Cadastrar novo endereco</button>
+                            </div>
+                       
+<!--========================================================================================EMAIL============================================================================================-->						
+						     <div class="col-12 p-3">
+                                <label for="email" class="lead font-weight-bold">Novo email</label>
+                                <input type="text" class="form-control" placeholder="joana@gmail.com" id="email">
+                            </div>                    
+                            
+                        
+                       
+                            <div class="col-12 text-center p-3">
+                                 <button class="btn btn-primary" id="registrar" onclick="alterarEmail()" type="submit">Cadastrar novo email</button>
+                            </div>
+
+
+                       
+							
+							
+							
+							
+							
+							
+</div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+<script>
+
+ function alterarNome(){
+	  let id = document.getElementById("id").value;
+	  let nome = document.getElementById("nome").value;
+      
+      var params = "nome="+nome+"&id="+id;
+      var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+			if(this.status == 200)
+            alert("fornecedor alterado com sucesso !");
+			else
+			alert("fornecedor  nao alterado!");
+       }
+    };
+
+      xhttp.open("POST", "/fornecedor/alter_fornecedor_nome", true);
+      xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhttp.send(params);
+
+    }
+
+//==========================================================================================CARGO====================================================================
+
+ function alterarEndereco(){
+	  let id = document.getElementById("id").value;
+	  let endereco = document.getElementById("endereco").value;
+      
+      var params = "id="+id+"&endereco="+ endereco;
+      var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+			if(this.status == 200)
+            alert("fornecedor alterado com sucesso !");
+			else
+			alert("fornecedor  nao alterado!");
+       }
+    };
+
+      xhttp.open("POST", "/fornecedor/alter_fornecedor_endereco", true);
+      xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhttp.send(params);
+
+    }
+
+//======================================================================SALÁRIOE=======================================================================================================
+    
+ function alterarEmail(){
+	  let id = document.getElementById("id").value;
+	  let email = document.getElementById("email").value;
+      
+      var params = "id="+id+"&email="+email;
+      var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+			if(this.status == 200)
+            alert("fornecedor alterado com sucesso !");
+			else
+			alert("fornecedor  nao alterado!");
+       }
+    };
+
+      xhttp.open("POST", "/fornecedor/alter_fornecedor_email", true);
+      xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhttp.send(params);
+
+    }
+
+
+
+
+
+
+
+
+
+</script>
+	<!--<script src="../../js/user.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a3121dc2ca.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>Cadastro</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- scripts para carregar cabeçalho de "standAloneHeader.html" em "header"-->
+        <link rel="stylesheet" href="../css/standAloneHeader.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script> 
+            $(function(){
+            $("#standAloneHeader_V2").load("standAloneHeaderV2.html"); 
+            });
+        </script>
+</head>
+
+<body onload="listarFornecedores()">
+ 
+    <!--Cabeçalho-->
+    <header id="standAloneHeader_V2"></header>
+    <main>
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Codigo</th>
+      <th scope="col">Nome</th>
+	  <th scope="col">Endereco</th>
+	<th scope="col">email</th>
+    </tr>
+  </thead>
+  <tbody id="user_table">
+  			 </tbody>
+			</table>
+    	</main>
+    <footer>
+
+    </footer>
+<script>
+
+function preencheTabela(Obj){
+	let tbody = document.getElementById("user_table");
+	var object = JSON.parse(Obj);
+	let html = "";
+	for(i = 0; i < object.length; i++){
+		html += `<tr>
+      	<th scope="row">${object[i].codigo}</th>
+      	<td>${object[i].nome}</td>
+      	<td>${object[i].endereco}</td>
+		<td>${object[i].email}</td>
+    	</tr>`;
+	}
+	tbody.innerHTML = html;
+}
+
+function listarFornecedores(){
+	var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+			if(this.status == 200){
+			preencheTabela(this.responseText);
+			}
+       }};
+      xhttp.open("GET", "/fornecedor/find_all_fornecedores", true);
+      xhttp.send();
+    }
+
+    </script>
+	<!--<script src="../../js/user.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a3121dc2ca.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
