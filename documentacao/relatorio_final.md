@@ -41,7 +41,7 @@ De acordo com o evidenciado, o problema que se busca resolver com este projeto �
 A finalidade integrada nesse projeto é a criação de um software que realize a gestão de estoque para o empreendedor, de forma facilitada e integra, proporcionando dados compactados, relatórios eficientes e estratégias de qualidade com a tecnologia mais recente do mercado, a fim de aperfeiçoar a administração do comércio e garantir o sucesso financeiro da empresa.
 
 ```
-1.3.1 Objetivos Específicos 
+	1.3.1 Objetivos Específicos 
 ```
 
 Proporcionar funcionalidades que viabilizem ao dono da empresa administrar seu próprio negócio por meio da gestão de estoque e ter em seu alcance relatórios atualizados a todo momento a partir das informações inseridas. * Garantir ao usuário, a partir das informações inseridas, a opção de utilizar gratuitamente as estratégias atualizadas de mercado disponibilizadas em nosso software. * Permitir a interação do usuário com a equipe de desenvolvimento para adicionar funcionalidades e relatórios específicos necessários para seu negócio.
@@ -53,7 +53,7 @@ Proporcionar funcionalidades que viabilizem ao dono da empresa administrar seu p
 De acordo com a pesquisa realizada pelo Sebrae, chamada “Causa Mortis”: a falta de gestão é uma das principais causas de mortalidade de empresas no Brasil. Essa pesquisa evidencia como são essenciais a organização e controle de um negócio, sendo um grande erro não se preocupar com o assunto, já que a falta de eficiência e organização ao gerenciar o estoque pode gerar prejuízos importantes para o negócio, como por exemplo: perda de vendas e investimentos desnecessários em produtos e materiais.
 
 ```
-	1.4. Questionário realizado
+	1.4.1 Questionário realizado
 ```
 
 As seguintes perguntas foram elaboradas com o objetivo de adquirir um maior embasamento sobre o contexto do projeto, assim, possibilitando o desenvolvimento do produto com maior exatidão sobre as reais necessidades dos usuários. Além disso, com a análise das perguntas foi possível comprovar a necessidade da elaboração do produto no mercado atual.
@@ -215,7 +215,7 @@ Com relação à gestão do código fonte, o grupo utiliza um processo baseado n
 3.4. Serviços inteligentes
 ```
 
-O mecanismo de inteligência utilizado no sistema será um chatbot. Para isso, o chatbot em questão será programado de modo a simular a conversação de um ser humano, utilizando conhecimento externo como base para suas respostas, assim sendo terá como objetivo auxiliar o usuário do site, fornecendo informações sobre como utilizar os diversos serviços oferecidos. 
+O mecanismo de inteligência utilizado no sistema será um chatbot. Para isso, o chatbot em questão será programado de modo a simular a conversação de um ser humano, utilizando conhecimento externo como base para suas respostas, assim terá como objetivo auxiliar o usuário do site, fornecendo informações sobre como utilizar os diversos serviços oferecidos. 
 
 A tabela a seguir apresenta os requisitos funcionais do chatbot, identificando a prioridade em que os mesmos devem ser entregues.
 
@@ -226,9 +226,44 @@ A tabela a seguir apresenta os requisitos funcionais do chatbot, identificando a
 |RF-03		|O chatbot deve ser capaz de esclarecer informações sobre o funcionamento do site |  Alta   |           
 |RF-04		|O chatbot deve fornecer informações sobre como cadastrar, atualizar ou excluir um produto| Alta   |
 |RF-05		|O chatbot deve fornecer informações sobre como gerar um relatório no site| Alta   |            
-|RF-06		|O chatbot deve fornecer informações sobre os desenvolvedores, além de um meio para contatá-los. | Média     |           
+|RF-06		|O chatbot deve fornecer informações sobre os desenvolvedores, além de um meio para contatá-los. | Média     |  
 
-Dessa forma, com base nos requisitos definidos acima o chatbot implementado no site será desenvolvido na plataforma BliP, a partir do uso de tecnologias como ferramentas de análise, APIs para efetivação dos serviços e algoritmos de Processamento de Linguagem Natural - PNL (do inglês Natural Language Processing - NLP), responsáveis por extrair o desejo dos usuários nas frases enviadas para o bot.
+Dessa forma, com base nos requisitos definidos acima o chatbot implementado no site será desenvolvido com auxílio da ferramenta da IBM Watson Assistant. Foram criadas as seguintes intenções:
+ - #bem-vindo: para ativar saudações iniciais ou voltar ao início da conversação, 
+ - #curiosidades: para dar dicas sobre gerenciamento de estoques, 
+ - #funcionalidades: para instruir sobre funções do site e,
+ - #encerramento: para encerrar a conversa.
+Foram criadas, ainda, as entidades “funcionário”, “produto” e “fornecedor”, agrupadas em “entidade”, e “consultar”, “remover”, “alterar” e “incluir”, agrupadas em “operação”. O chatbot se inicia com uma saudação e logo pergunta se o usuário deseja ler uma dica ou ser orientado sobre alguma funcionalidade. Uma das duas opções poderá ser clicada ou pode-se digitar livremente sobre sua intenção. Caso o bot identifique a intenção “curiosidades”, ele apresentará uma de 7 mensagens informativas aleatoriamente e em seguida perguntará se o usuário deseja algo mais. Em caso de resposta afirmativa, o bot ativará a intenção “bem-vindo” que irá redirecionar a conversa para o início. Em caso de negativa, será feita uma despedida. Na identificação da intenção “funcionalidades”, o bot perguntará se deseja realizar uma operação com as entidades “funcionário”, “produto” ou “fornecedor”, a seguir perguntará qual tipo de operação deseja-se fazer, dentre “consultar”, “remover”, “alterar” e “incluir”. Em cada combinação de respostas, o chatbot apresentará uma mensagem informativa, de modo a conduzir o usuário até o local no site. Após cada interação, o bot perguntará se deseja algo mais, até que se encerre o ciclo.
+
+```
+	3.4.1 IS Canvas
+```
+Para a implementação do chatbot, a equipe elaborou o quadro IS Canvas, com o objetivo de facilitar o planejamento e a visualização do projeto. 
+
+IMAGEM IS CANVAS
+
+```
+	3.4.2 Jornada do Usuário
+```
+
+A jornada do usuário é o ponto de partida do design de diálogo. Ela exibe os passos que se espera que o usuário execute para alcançar seu objetivo. Dessa forma, o chatbot desenvolvido configura-se como um Keyword Recognition Chatbots, ou seja, reconhecedores de palavra-chave, visto que tem como objetivo capturar o que o usuário digita e responder apropriadamente, uma vez que as palavras chaves e as intenções sejam identificadas.
+O chatbot em questão visa ajudar o usuário a ter uma melhor experiência no site, sendo capaz de responder a dúvidas como “Como inserir um produto? Como cadastrar um novo funcionário? Como alterar a ocupação de um funcionário?” e, além disso, pode fornecer curiosidades sobre o gerenciamento de estoque. A interação com esse agente inteligente se inicia com uma introdução, na qual há a apresentação do chatbot como um assistente e um menu em que o usuário pode escolher se deseja obter curiosidades sobre o gerenciamento de estoque ou esclarecer dúvidas sobre uma funcionalidade do site. Caso escolha a segunda opção, logo que o usuário enviar uma pergunta para o chatbot, este identifica a intenção a entidade presentes na mensagem e fornece ao usuário uma resposta compatível. Por fim, o usuário deve confirmar se sua dúvida foi esclarecida e se deseja fazer mais perguntas. Caso possua mais perguntas, o processo se reinicia, caso contrário é exibida uma mensagem de despedida.
+Tendo em vista o processo descrito acima, segue uma lista de tarefas que o usuário precisa cumprir para atingir seu objetivo.
+	1. Usuário escolhe entre obter curiosidades ou esclarecer dúvidas a respeito das funcionalidades do site.
+	2. Caso escolha a primeira opção, depois de obter as curiosidades, o usuário informa se deseja esclarecer dúvidas acerca das funcionalidades do site. 
+	3. Caso escolha a segunda opção, o usuário pergunta ao chatbot acerca de uma das funcionalidades do site.
+	4. Usuário informa se há mais alguma dúvida.
+	
+IMAGEM JORNADA DO USUÁRIO
+
+```
+	3.4.3 Fluxo de Diálogo
+```
+
+A partir da elaboração da jornada de usuário torna-se possível a elaboração de um fluxo de diálogo, de modo que, uma vez que as intenções e entidades são identificadas, o chatbot irá retornar uma mensagem compatível. Dessa forma, é estabelecido o fluxo da conversa entre o chatbot e o usuário. 
+Para que o chatbot retorne ao usuário uma mensagem compatível com a expectativa do usuário, foram estabelecidas intenções e entidades. Sendo assim, o agente inteligente deve ser capaz de reconhecer intenções como: usuário com dúvida, usuário sem dúvida, cadastrar, atualizar, consultar ou remover funcionário, produto e fornecedor. Tais intenções são obtidas a partir das mensagens enviadas pelo usuário e, em conjunto com as entidades produto, funcionário e fornecedor, auxiliam no direcionamento do fluxo do diálogo.
+
+IMAGEM FLUXO DE DIÁLOGO
 
 ```
 3.5. Modelagem de dados
